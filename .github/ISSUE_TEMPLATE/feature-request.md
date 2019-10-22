@@ -7,11 +7,17 @@ assignees: ''
 
 ---
 
-**Descrição da nova funcionalidade**
+## **Descrição da nova funcionalidade**
 // escreva aqui a nova funcionalidade
 
-**Tasks da funcionalidade**
+### **Print da tela do Protótipo**
+//colocar a imagem aqui
+
+### **Rota da api**
+// coloque aqui a rota da API
+
+### **Tasks da funcionalidade**
 // escreva aqui
 
-**Critérios de Aceitação**
+### **Critérios de Aceitação**
 //escreva aqui
