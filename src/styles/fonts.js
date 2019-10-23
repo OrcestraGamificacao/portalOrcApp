@@ -1,9 +1,9 @@
 const fonts = {
   input: 16,
-  regular: 14,
-  medium: 12,
+  regular: 15,
+  medium: 13,
   small: 11,
-  tiny: 10,
+  tiny: 9,
 };
 
 export default fonts;
