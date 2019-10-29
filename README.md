@@ -10,7 +10,3 @@ bem como fornecer um ambiente para que os membros possam ter acesso ao status da
 ## Como contribuir:
 
 ## Como rodar:
-
-```$ expo start```
-ou
-```$ yarn start```

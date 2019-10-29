@@ -3,18 +3,17 @@ import React from 'react';
 import { View, StatusBar } from 'react-native';
 import styles from './styles';
 
-import ExemploOrc from '~/components/exemploOrc';
 import SplashScreen from '~/components/splashScreen';
 
-const Main = () => (
+const Splash = () => (
   <View style={styles.container}>
     <StatusBar barStyle="light-content" />
-    <ExemploOrc />
+    <SplashScreen />
   </View>
 );
 
-Main.navigationOptions = {
-  title: 'Orc',
+Splash.navigationOptions = {
+  header: null,
 };
 
-export default Main;
+export default Splash;
