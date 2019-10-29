@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image, View, Text, StyleSheet, TouchableOpacity,
 } from 'react-native';
+import { colors } from '~/styles';
 
-const orcImage = () => (
+const logoOrc = () => (
   <Image
-    style={styles.imageOrc}
-    source={require('~/assets/images/orc_wow.png')}
+    style={styles.logoOrcStyle}
+    source={{
+      uri:
+        'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+    }}
   />
 );
 
@@ -18,22 +22,43 @@ const addButton = () => (
   </TouchableOpacity>
 );
 
-const NavBar = () => (
-  <View />
-);
+export default class Tasks extends Component {
+  static navigationOptions = {
+    title: 'Tarefas',
+    headerLeft: logoOrc,
+    headerRight: addButton,
+    headerBackTitleVisible: false,
+    headerTintColor: '#FFF',
+    headerBackground: (
+      <Image
+        style={StyleSheet.absoluteFill}
+        source={{
+          uri: 'https://i.imgur.com/oPgigXi.jpg',
+        }}
+      />
+    ),
+    headerStyle: {
+      backgroundColor: colors.greenOrcLight,
+      textAlign: 'center',
+    },
+    headerTitleStyle: {
+      fontFamily: 'monospace',
+      fontSize: 30,
+    },
+  };
 
-NavBar.navigationOptions = {
-  title: 'Tarefas',
-  headerLeft: orcImage,
-  headerRight: addButton,
-};
+  render() {
+    return (
+      <View />
+    );
+  }
+}
 
-export default NavBar;
 
 const styles = StyleSheet.create({
-  imageOrc: {
-    width: 50,
-    height: 50,
+  logoOrcStyle: {
+    width: 64,
+    height: 64,
   },
 
   addButtonStyle: {
