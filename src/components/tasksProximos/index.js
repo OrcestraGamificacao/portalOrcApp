@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import {
-  View, Text, StyleSheet,
+  View, Text,
 } from 'react-native';
 import { CheckBox } from 'react-native-elements';
-import { colors, fonts } from '~/styles';
+import styles from './styles';
 
 export default class TasksProximos extends Component {
   constructor(props) {
@@ -40,27 +40,3 @@ export default class TasksProximos extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: colors.greenOrcLight,
-  },
-  flexContainer: {
-    flex: 1,
-  },
-
-  titleTextStyle: {
-    fontSize: fonts.input,
-    color: '#000',
-    fontFamily: 'monospace',
-    paddingLeft: 25,
-  },
-
-  textStyle: {
-    fontSize: fonts.input,
-    color: '#000',
-    fontFamily: 'monospace',
-  },
-});

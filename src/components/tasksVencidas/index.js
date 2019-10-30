@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 import {
-  View, Text, StyleSheet,
+  View, Text,
 } from 'react-native';
 import { CheckBox } from 'react-native-elements';
-import { colors, fonts } from '~/styles';
+import styles from './styles';
 
-export default class TasksHoje extends Component {
+export default class TasksVencidas extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +19,7 @@ export default class TasksHoje extends Component {
       <View>
         <View style={styles.container}>
           <View style={styles.flexContainer}>
-            <Text style={styles.titleTextStyle}>Hoje</Text>
+            <Text style={styles.titleTextStyle}>Vencidas</Text>
           </View>
         </View>
         <View>
@@ -40,27 +40,3 @@ export default class TasksHoje extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: colors.greenOrcLight,
-  },
-  flexContainer: {
-    flex: 1,
-  },
-
-  titleTextStyle: {
-    fontSize: fonts.input,
-    color: '#000',
-    fontFamily: 'monospace',
-    paddingLeft: 25,
-  },
-
-  textStyle: {
-    fontSize: fonts.input,
-    color: '#000',
-    fontFamily: 'monospace',
-  },
-});
