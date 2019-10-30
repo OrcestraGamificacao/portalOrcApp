@@ -3,10 +3,10 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { colors } from '~/styles';
 
-import Main from '~/pages/Main';
+import Membros from '~/pages/Membros';
 
 const Routes = createAppContainer(createStackNavigator(
-  { Main },
+  { Membros },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
