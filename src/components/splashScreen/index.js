@@ -23,14 +23,14 @@ export default class App extends React.Component {
       this.state.width, // The animated value to drive
       {
         toValue: 360, // Animate to opacity: 1 (opaque)
-        duration: 10, // Make it take a while
+        duration: 100, // Make it take a while
       },
     ).start(); // Starts the animation
     Animated.timing(
       this.state.height, // The animated value to drive
       {
         toValue: 750, // Animate to opacity: 1 (opaque)
-        duration: 1000, // Make it take a while
+        duration: 1800, // Make it take a while
       },
     ).start(); // Starts the animation
   }
