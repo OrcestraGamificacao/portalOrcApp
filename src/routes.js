@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { colors } from '~/styles';
 
-import Main from '~/pages/Main';
+import Main from '~/pages/Tasks/';
 
 const Routes = createAppContainer(createStackNavigator(
   { Main },
