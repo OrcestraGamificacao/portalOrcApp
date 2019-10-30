@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import {
   View, Text, Image, StyleSheet,
 } from 'react-native';
-import styles from './styles.js';
+import styles from './styles';
 
 export default class MEMBROS extends Component {
   static navigationOptions = {
     headerBackTitleVisible: false,
-    headerTintColor: '#ffffff',
+    headerTintColor: '#FFF',
     headerBackground: (
       <Image
         style={StyleSheet.absoluteFill}
