@@ -28,6 +28,14 @@ const styles = StyleSheet.create({
     height: 23,
     marginLeft:75,
   },
+  textCalendario: {
+    fontSize: 20,
+    width: 900,
+    height: 23,
+    marginLeft: 198,
+    marginTop: 61,
+    color: "#7AAF50",
+  },
 });
 
 
