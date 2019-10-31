@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   textCalendario: {
     fontSize: 20,
     marginLeft: 198,
-    marginTop: 378,
+    marginTop: 30,
     color: '#7AAF50',
   },
   textBlock: {
