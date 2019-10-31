@@ -37,11 +37,21 @@ export default class Profile extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.textBody}>Minhas informações</Text>
+        <Text style={styles.textTitle}>Minhas informações</Text>
         <ProfilePic />
-        <Text style={styles.textBody2}>Nome: Fulaninha</Text>
-        <Text style={styles.textBody3}>Diretoria: Negócios</Text>
-        <Text style={styles.textBody3}>E-mail: fulaninha@orcestra.com.br</Text>
+        <View>
+          <Text style={styles.textBlock}>
+            <Text style={styles.textBody}>Nome: </Text>
+            <Text style={styles.textBody2}>Fulaninha</Text>
+            {'\n'}
+            <Text style={styles.textBody}>Diretoria: </Text>
+            <Text style={styles.textBody2}>Negócios</Text>
+            {'\n'}
+            <Text style={styles.textBody}>E-mail: </Text>
+            <Text style={styles.textBody2}>fulaninha@orcestra.com.br</Text>
+            {'\n'}
+          </Text>
+        </View>
         <Text style={styles.textCalendario}>Ver meu calendário</Text>
       </View>
     );

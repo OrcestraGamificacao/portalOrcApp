@@ -5,7 +5,6 @@ class LogoOrc extends Component {
   render() {
     return (
       <Image
-        // source={require('../../../assets/Orc_estra_capacete_colorido.png')}
         source={{
           uri:
             'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',

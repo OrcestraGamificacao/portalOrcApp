@@ -1,42 +1,34 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '~/styles';
-import React from 'react';
-import {Text,View,} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
   },
-  textBody: {
+  textTitle: {
     fontSize: 30,
-    width: 500,
-    height: 34,
-    marginLeft:18,
+    fontWeight: 'bold',
+    marginLeft: 18,
     marginTop: 21,
   },
-  textBody2: {
+  textBody: {
     fontSize: 20,
-    width: 500,
-    height: 23,
-    marginLeft:75,
-    marginTop: 200,
+    fontWeight: 'bold',
   },
-  textBody3: {
-    fontSize: 20,
-    width: 500,
-    height: 23,
-    marginLeft:75,
+  textBody2: {
+    fontSize: 16,
   },
   textCalendario: {
     fontSize: 20,
-    width: 900,
-    height: 23,
     marginLeft: 198,
-    marginTop: 61,
-    color: "#7AAF50",
+    marginTop: 378,
+    color: '#7AAF50',
+  },
+  textBlock: {
+    marginLeft: 75,
+    marginTop: 200,
+    lineHeight: 30,
   },
 });
-
 
 export default styles;
