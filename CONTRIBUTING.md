@@ -35,7 +35,7 @@ Veja a política de merges no tópico [Merges para dev](CONTRIBUTING.md#merges-p
 
 #### Nome das Branches
 
-As branchs de desenvolvimento de features serão criadas a partir da branch *development* com a nomenclatura padrão `#x_nome_da_issue`, onde o `x` representa o código de rastreio da issue.
+As branchs de desenvolvimento de features serão criadas a partir da branch *development* com a nomenclatura padrão `nome_da_issue_#x`, onde o `x` representa o código de rastreio da issue.
 
 ### Política de Commits
 
@@ -62,7 +62,7 @@ Para que ambos envolvidos no commit sejam incluidos como contribuintes no gráfi
 ```
 #5 Fazendo guia de contribuição
 
-Co-authored-by: Amanda Muniz <amanda.muniiz@outlook.com>
+Co-authored-by: Alan Marques Sousa <alan.sousa@protonmail.com>
 Co-authored-by: Luciana Albuquerque <albuquerqueluciana54@gmail.com>
 
 ```
@@ -92,7 +92,7 @@ Deve ser seguido o [template Pull Request](PULL_REQUEST_TEMPLATE.md).
 
 ##### Work in Progress
 
-Caso haja a necessidade de atualizar a branch *dev* antes de concluir a issue, o nome do pull request deve conter WIP:<X_nome_da_branch> para que a branch não seja deletada.
+Caso haja a necessidade de atualizar a branch *dev* antes de concluir a issue, o nome do pull request deve conter WIP:<nome_da_branch_X> para que a branch não seja deletada.
 
 #### Merges para *dev*
 Os merges para *dev* deverão ser feitos quando a funcionalidade ou refatoração estiverem de acordo com os seguintes aspectos:
