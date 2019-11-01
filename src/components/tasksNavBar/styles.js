@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: '#FFF',
-    height: 35,
+    height: 42,
   },
 
   buttonContainer: {
