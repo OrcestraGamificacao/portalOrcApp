@@ -54,6 +54,33 @@ const ActivitiesSatck = createStackNavigator(
 
 const stackBottomTabNavigator = createMaterialBottomTabNavigator(
   {
+    Inicio: {
+      screen: mainStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Inicio',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="home" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
+    Atividades: {
+      screen: ActivitiesSatck,
+      navigationOptions: () => ({
+        tabBarLabel: 'Atividades',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="line-chart" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
+    // Tarefas: {
+    //   screen: TasksStack,
+    //   navigationOptions: () => ({
+    //     tabBarLabel: 'Tarefas',
+    //     tabBarIcon: ({ focused }) => (
+    //       <Icon name="check-square-o" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+    //     ),
+    //   }),
+    // },
     Membros: {
       screen: MembrosStack,
       navigationOptions: () => ({
@@ -63,42 +90,15 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
         ),
       }),
     },
-    Inicio: {
-      screen: mainStack,
-      navigationOptions: () => ({
-        tabBarLabel: 'Home',
-        tabBarIcon: ({ focused }) => (
-          <Icon name="home" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
-        ),
-      }),
-    },
-    Activities: {
-      screen: ActivitiesSatck,
-      navigationOptions: () => ({
-        tabBarLabel: 'Activities',
-        tabBarIcon: ({ focused }) => (
-          <Icon name="line-chart" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
-        ),
-      }),
-    },
-    // Tarefas: {
-    //   screen: mainStack,
-    //   navigationOptions: () => ({
-    //     tabBarLabel: 'Tarefas',
-    //     tabBarIcon: ({ focused }) => (
-    //       <Icon name="home" type="FontAwesome" size={20} color={focused ? '#7AAF50' : '#808080'} />
-    //     ),
-    //   }),
-    // },
-    // Perfil: {
-    //   screen: mainStack,
-    //   navigationOptions: () => ({
-    //     tabBarLabel: 'Perfil',
-    //     tabBarIcon: ({ focused }) => (
-    //       <Icon name="home" type="FontAwesome" size={20} color={focused ? '#7AAF50' : '#808080'} />
-    //     ),
-    //   }),
-    // },
+  //   Perfil: {
+  //     screen: ProfileStack,
+  //     navigationOptions: () => ({
+  //       tabBarLabel: 'Perfil',
+  //       tabBarIcon: ({ focused }) => (
+  //         <Icon name="user" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+  //       ),
+  //     }),
+  //   },
   },
   {
     inicialRouteName: 'Home',
