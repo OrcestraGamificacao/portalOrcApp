@@ -9,7 +9,7 @@ import TasksHoje from '~/components/tasksHoje';
 import TasksAmanha from '~/components/tasksAmanha';
 import TasksProximos from '~/components/tasksProximos';
 import styles from './styles';
-
+// comentario
 const Main = () => (
   <ScrollView>
     <TasksNavBar />
@@ -36,6 +36,7 @@ Main.navigationOptions = {
       style={styles.addButtonStyle}
     >
       <Text style={styles.addButtonTextStyle}>+</Text>
+
     </TouchableOpacity>
   ),
   headerBackTitleVisible: false,
