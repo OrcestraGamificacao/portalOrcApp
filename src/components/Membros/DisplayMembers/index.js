@@ -4,6 +4,8 @@ import styles from './styles';
 
 const Presidencia = () => (
 
-  <View />
+  <View style={styles.container}>
+    <Text>Presidencia</Text>
+  </View>
 
 );
