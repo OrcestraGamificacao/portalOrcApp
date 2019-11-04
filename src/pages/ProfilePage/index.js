@@ -22,7 +22,7 @@ export default class Profile extends Component {
       />
     ),
     headerTitleStyle: {
-      fontFamily: 'monospace',
+      // fontFamily: 'monospace',
       fontSize: 30,
     },
     title: 'Perfil',
