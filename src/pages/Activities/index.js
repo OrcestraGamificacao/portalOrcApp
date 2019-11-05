@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Member from '../../components/Member';
 import {
   View, Text, Image, StyleSheet,
 } from 'react-native';
