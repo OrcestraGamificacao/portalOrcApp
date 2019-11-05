@@ -38,7 +38,9 @@ export default class Profile extends Component {
     return (
       <View>
         <Text style={styles.textTitle}>Minhas informações</Text>
-        <ProfilePic />
+        <View style={styles.profilePic}>
+          <ProfilePic />
+        </View>
         <View>
           <Text style={styles.textBlock}>
             <Text style={styles.textBody}>Nome: </Text>

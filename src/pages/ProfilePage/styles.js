@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   textTitle: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginLeft: 18,
+    marginLeft: 20,
     marginTop: 21,
   },
   textBody: {
@@ -18,15 +18,20 @@ const styles = StyleSheet.create({
   textBody2: {
     fontSize: 16,
   },
+  profilePic: {
+    alignItems: 'center',
+  },
   textCalendario: {
     fontSize: 20,
-    marginLeft: 198,
-    marginTop: 30,
+    textAlign: 'right',
+    marginTop: 50,
+    marginRight: 8,
     color: '#7AAF50',
   },
   textBlock: {
-    marginLeft: 75,
-    marginTop: 200,
+    marginLeft: 50,
+    textAlign: 'left',
+    marginTop: 210,
     lineHeight: 30,
   },
 });

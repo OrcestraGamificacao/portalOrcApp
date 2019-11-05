@@ -12,8 +12,7 @@ class ProfilePic extends Component {
           position: 'absolute',
           width: 159,
           height: 159,
-          marginLeft: 125,
-          marginTop: 80,
+          marginTop: 20,
         }}
       />
     );
