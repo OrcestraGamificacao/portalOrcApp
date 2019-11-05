@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   buttonTextStyle: {
     fontSize: fonts.input,
     color: '#000',
-    fontFamily: 'monospace',
   },
 });
 
