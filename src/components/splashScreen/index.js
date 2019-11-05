@@ -40,7 +40,7 @@ export default class App extends React.Component {
     const { width } = this.state;
 
     return (
-      <View style={styles.MainContainer}>
+      <View style={styles.orcHelmet}>
         <ImageBackground source={require('~/assets/images/BG.png')} style={{ width: '100%', height: '100%' }}>
           <ImageBackground source={require('~/assets/images/PATTERN.png')} style={{ width: '100%', height: '100%' }}>
             <Animated.Image
@@ -59,7 +59,7 @@ export default class App extends React.Component {
 }
 const styles = StyleSheet.create({
 
-  MainContainer: {
+  orcHelmet: {
     flex: 1,
     position: 'relative',
   },

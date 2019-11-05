@@ -5,6 +5,7 @@ import styles from './styles';
 
 import SplashScreen from '~/components/splashScreen';
 
+
 const Splash = () => (
   <View style={styles.container}>
     <StatusBar barStyle="light-content" />

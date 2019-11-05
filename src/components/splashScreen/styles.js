@@ -3,8 +3,8 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 const styles = StyleSheet.create({
   orcHelmet: {
-    width: '80%',
-    height: '52%',
+    width: '100%',
+    height: '100%',
     left: wp('10,5%'),
     top: wp('50%'),
 

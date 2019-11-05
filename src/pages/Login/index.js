@@ -1,20 +1,19 @@
 import React from 'react';
 
 import { View, StatusBar } from 'react-native';
-import styles from './styles';
+import styles from './style';
 
-import ExemploOrc from '~/components/exemploOrc';
+import LoginScreen from '../../components/Login';
 
 
 const Main = () => (
   <View style={styles.container}>
-    <StatusBar barStyle="light-content" />
-    <ExemploOrc />
+    <LoginScreen />
   </View>
 );
 
 Main.navigationOptions = {
-  title: 'Orc',
+  header: null,
 };
 
 export default Main;

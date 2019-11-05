@@ -5,9 +5,10 @@ import { colors } from '~/styles';
 
 import Main from '~/pages/Main';
 import Splash from '~/pages/splashScreen';
+import Login from '~/pages/Login';
 
 const Routes = createAppContainer(createStackNavigator(
-  { Splash },
+  { Login },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
