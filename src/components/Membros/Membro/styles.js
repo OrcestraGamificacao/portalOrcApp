@@ -2,29 +2,25 @@ import { StyleSheet } from 'react-native';
 import { fonts } from '~/styles';
 
 const styles = StyleSheet.create({
-  nome: {
+  name: {
     fontSize: fonts.small,
     color: '#000',
     fontFamily: 'Patrick Hand',
   },
-  cargo: {
+  role: {
     fontSize: fonts.tiny,
     color: '#000',
     fontFamily: 'Patrick Hand',
-
   },
-  membro: {
+  member: {
     alignItems: 'center',
-
+    width: 76,
+    height: 76,
   },
-  imagem: {
-
-    width: 50,
-    borderRadius: '50%',
-
-
+  photo: {
+    width: 75,
+    height: 75,
+    borderRadius: 50,
   },
-
-
 });
 export default styles;
