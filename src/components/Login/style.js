@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   button: {
     width: normalize(300),
-    borderColor: 'grey',
-    backgroundColor: 'grey',
+    borderColor: 'black',
+    backgroundColor: 'black',
     borderWidth: 4,
     top: normalize(180, 'height'),
     left: normalize(35),
