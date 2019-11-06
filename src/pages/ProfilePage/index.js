@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Platform } from 'react-native';
 
 import { colors } from '~/styles';
 
@@ -22,8 +22,15 @@ export default class Profile extends Component {
       />
     ),
     headerTitleStyle: {
-      // fontFamily: 'monospace',
       fontSize: 30,
+      ...Platform.select({
+        ios: {
+          fontFamily: 'Courier',
+        },
+        android: {
+          fontFamily: 'monospace',
+        },
+      }),
     },
     title: 'Perfil',
     headerStyle: {

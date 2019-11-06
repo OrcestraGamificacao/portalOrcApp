@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,13 +10,37 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 20,
     marginTop: 21,
+    ...Platform.select({
+      ios: {
+        fontFamily: 'AppleSDGothicNeo-Regular',
+      },
+      android: {
+        fontFamily: 'serif',
+      },
+    }),
   },
   textBody: {
     fontSize: 20,
     fontWeight: 'bold',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'AppleSDGothicNeo-Regular',
+      },
+      android: {
+        fontFamily: 'serif',
+      },
+    }),
   },
   textBody2: {
     fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontFamily: 'AppleSDGothicNeo-Regular',
+      },
+      android: {
+        fontFamily: 'serif',
+      },
+    }),
   },
   profilePic: {
     alignItems: 'center',
@@ -27,6 +51,14 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginRight: 8,
     color: '#7AAF50',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'AppleSDGothicNeo-Regular',
+      },
+      android: {
+        fontFamily: 'serif',
+      },
+    }),
   },
   textBlock: {
     marginLeft: 50,
