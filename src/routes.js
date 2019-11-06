@@ -119,6 +119,11 @@ const AppNavigator = createStackNavigator(
   {
     App: stackBottomTabNavigator,
   },
+  {
+    defaultNavigationOptions: {
+      header: null,
+    },
+  },
 );
 
 const Routes = createAppContainer(AppNavigator);
