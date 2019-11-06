@@ -34,9 +34,11 @@ export default class App extends React.Component {
         toValue: 550, // Animate to opacity: 1 (opaque)
         duration: 1000, // Make it take a while
       },
+
+
     ).start(); // Starts the animation
 
-    setTimeout(() => { Alert.alert('Mostra depois de 5 segundos.'); }, 2000);
+    setTimeout(() => { Alert.alert('Bem vindo.'); }, 2000);
   }
 
   render() {
@@ -53,7 +55,7 @@ export default class App extends React.Component {
               style={{
                 width,
                 height,
-                position: 'relative',
+                position: 'absolute',
               }}
             />
           </ImageBackground>
