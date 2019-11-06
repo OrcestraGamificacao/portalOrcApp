@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
   name: {
     fontSize: fonts.small,
     color: '#000',
-    fontFamily: 'Patrick Hand',
+    fontFamily: 'monospace',
   },
   role: {
     fontSize: fonts.tiny,
     color: '#000',
-    fontFamily: 'Patrick Hand',
+    fontFamily: 'monospace',
   },
   member: {
     alignItems: 'center',

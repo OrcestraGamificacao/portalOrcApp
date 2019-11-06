@@ -7,15 +7,15 @@ const DisplayMembers = () => (
   <View>
     <View style={styles.presidencia}>
       <Text style={styles.name}>Presidência</Text>
-      <Membro />
+      <View style={styles.members}></View>
     </View>
     <View style={styles.diretores}>
       <Text style={styles.name}>Diretores</Text>
-      <Membro />
+      <View style={styles.members}></View>
     </View>
     <View style={styles.acessores}>
       <Text style={styles.name}>Acessores</Text>
-      <Membro />
+      <View style={styles.members}></View>
     </View>
   </View>
 );
