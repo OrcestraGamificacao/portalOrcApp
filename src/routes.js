@@ -3,8 +3,6 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
-import IconIon from 'react-native-vector-icons/Ionicons';
 import { colors } from '~/styles';
 
 
@@ -18,8 +16,7 @@ import Activities from './pages/Activities';
 // import Profile from './pages/Profile';
 
 Icon.loadFont();
-IconMaterial.loadFont();
-IconIon.loadFont();
+
 
 const mainStack = createStackNavigator(
   { Main },
@@ -77,7 +74,8 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
     //   navigationOptions: () => ({
     //     tabBarLabel: 'Tarefas',
     //     tabBarIcon: ({ focused }) => (
-    //       <Icon name="check-square-o" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+    //       <Icon name="check-square-o" type="Icon"
+    //        size={20} color={focused ? '#7AAF50' : '#808080'} />
     //     ),
     //   }),
     // },
