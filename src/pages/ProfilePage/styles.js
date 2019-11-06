@@ -45,6 +45,15 @@ const styles = StyleSheet.create({
   profilePic: {
     alignItems: 'center',
   },
+  imageLimit: {
+    position: 'absolute',
+    width: 159,
+    height: 159,
+    marginTop: 20,
+    borderRadius: 159 / 2,
+    borderWidth: 2,
+    borderColor: '#7AAF50',
+  },
   textCalendario: {
     fontSize: 20,
     textAlign: 'right',

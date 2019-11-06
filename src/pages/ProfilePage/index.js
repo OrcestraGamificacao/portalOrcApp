@@ -8,13 +8,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import api from '../../services/api';
+
 import { colors } from '~/styles';
 
 import styles from './styles';
 
 import LogoOrc from './LogoOrc';
 import Notif from './Notif';
-import ProfilePic from './ProfilePic';
 
 export default class Profile extends Component {
   static navigationOptions = {
@@ -48,23 +49,45 @@ export default class Profile extends Component {
     headerRight: () => <Notif />,
   };
 
+  state = {
+    info: {},
+  };
+
+  componentDidMount() {
+    this.loadInfo();
+  }
+
+  loadInfo = async () => {
+    const response = await api.get('/users/alan-ms');
+
+    const info = response.data;
+
+    this.setState({ info });
+    console.log(this.state.info);
+  };
+
   render() {
     return (
       <View>
         <Text style={styles.textTitle}>Minhas informações</Text>
         <View style={styles.profilePic}>
-          <ProfilePic />
+          <Image
+            source={{
+              uri: this.state.info.avatar_url,
+            }}
+            style={styles.imageLimit}
+          />
         </View>
         <View>
           <Text style={styles.textBlock}>
             <Text style={styles.textBody}>Nome: </Text>
-            <Text style={styles.textBody2}>Fulaninha</Text>
+            <Text style={styles.textBody2}>{this.state.info.name}</Text>
             {'\n'}
             <Text style={styles.textBody}>Diretoria: </Text>
-            <Text style={styles.textBody2}>Negócios</Text>
+            <Text style={styles.textBody2}>{this.state.info.type}</Text>
             {'\n'}
             <Text style={styles.textBody}>E-mail: </Text>
-            <Text style={styles.textBody2}>fulaninha@orcestra.com.br</Text>
+            <Text style={styles.textBody2}>{this.state.info.html_url}</Text>
             {'\n'}
           </Text>
         </View>
