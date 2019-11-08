@@ -1,25 +1,14 @@
 import React from 'react';
 import {
-  Image, ScrollView, Text, StyleSheet, TouchableOpacity,
+  Image, Text, StyleSheet, TouchableOpacity, View,
 } from 'react-native';
 import { colors } from '~/styles';
-import TasksNavBar from '~/components/tasksNavBar';
-import TasksVencidas from '~/components/tasksVencidas';
-import TasksHoje from '~/components/tasksHoje';
-import TasksAmanha from '~/components/tasksAmanha';
-import TasksProximos from '~/components/tasksProximos';
+import TopTab from '~/components/tasksNavBar';
 import styles from './styles';
 
 const Main = () => (
-  <ScrollView>
-    <TasksNavBar />
-    <TasksVencidas />
-    <TasksHoje />
-    <TasksAmanha />
-    <TasksProximos />
-  </ScrollView>
+  <TopTab />
 );
-
 Main.navigationOptions = {
   title: 'Tarefas',
   headerLeft: (
