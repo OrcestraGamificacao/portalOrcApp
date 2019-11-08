@@ -34,18 +34,58 @@ const mainStack = createStackNavigator(
 
 const MembrosStack = createStackNavigator(
   { Membros },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
 );
 
 const ActivitiesSatck = createStackNavigator(
   { Activities },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
 );
 
 // const TasksStack = createStackNavigator(
 //   { Tasks },
+//   {
+//   headerLayoutPreset: 'center',
+//   headerBackTitleVisible: false,
+//   defaultNavigationOptions: {
+//     headerStyle: {
+//       backgroundColor: colors.greenOrc,
+//     },
+//     headerTintColor: colors.duckYellow,
+//   },
+// },
 // );
 
 // const ProfileStack = createStackNavigator(
 //   { Profile },
+//   {
+//     headerLayoutPreset: 'center',
+//     headerBackTitleVisible: false,
+//     defaultNavigationOptions: {
+//     headerStyle: {
+//     backgroundColor: colors.greenOrc,
+//     },
+//     headerTintColor: colors.duckYellow,
+//   },
+// },
 // );
 
 
