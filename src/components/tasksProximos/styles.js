@@ -14,14 +14,12 @@ const styles = StyleSheet.create({
   titleTextStyle: {
     fontSize: fonts.input,
     color: '#000',
-    fontFamily: 'monospace',
     paddingLeft: 25,
   },
 
   textStyle: {
     fontSize: fonts.input,
     color: '#000',
-    fontFamily: 'monospace',
   },
 });
 
