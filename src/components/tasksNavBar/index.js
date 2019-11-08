@@ -1,27 +1,24 @@
-import React from 'react';
-import {
-  View, Text, TouchableOpacity,
-} from 'react-native';
-import styles from './styles';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import { createAppContainer } from 'react-navigation';
 
-const TasksNavBar = () => (
-  <View style={styles.container}>
-    <View style={styles.buttonContainer}>
-      <TouchableOpacity>
-        <Text style={styles.buttonTextStyle}>Minhas</Text>
-      </TouchableOpacity>
-    </View>
-    <View style={styles.buttonContainer}>
-      <TouchableOpacity>
-        <Text style={styles.buttonTextStyle}>Delegadas</Text>
-      </TouchableOpacity>
-    </View>
-    <View style={styles.buttonContainer}>
-      <TouchableOpacity>
-        <Text style={styles.buttonTextStyle}>Concluidas</Text>
-      </TouchableOpacity>
-    </View>
-  </View>
-);
+import Minhas from './tabs/minhasTab';
+import Delegadas from './tabs/delegadasTab';
+import Concluidas from './tabs/concluidasTab';
 
-export default TasksNavBar;
+const TopTab = createAppContainer(createMaterialTopTabNavigator({
+  Minhas,
+  Delegadas,
+  Concluidas,
+}, {
+  tabBarOptions: {
+    labelStyle: {
+      color: 'black',
+    },
+    style: {
+      backgroundColor: 'white',
+    },
+    upperCaseLabel: false,
+  },
+}));
+
+export default TopTab;
