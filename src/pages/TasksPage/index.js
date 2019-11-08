@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Image, Text, StyleSheet, TouchableOpacity, View,
+  Image, Text, StyleSheet, TouchableOpacity,
 } from 'react-native';
 import { colors } from '~/styles';
 import TopTab from '~/components/tasksNavBar';
@@ -48,5 +48,3 @@ Main.navigationOptions = {
 };
 
 export default Main;
-
-// lol
