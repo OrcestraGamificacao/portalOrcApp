@@ -5,7 +5,6 @@ import { View, StatusBar } from 'react-native';
 import styles from './styles';
 
 import ExemploOrc from '~/components/exemploOrc';
-import SplashScreen from '~/components/splashScreen';
 
 const Main = () => (
   <View style={styles.container}>

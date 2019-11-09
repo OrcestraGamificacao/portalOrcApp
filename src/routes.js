@@ -4,10 +4,9 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { colors } from '~/styles';
 
 import Main from '~/pages/Main';
-import Splash from '~/pages/splashScreen';
 
 const Routes = createAppContainer(createStackNavigator(
-  { Splash },
+  { Main },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,

@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   imageOrc: {
-    width: 10,
-    height: 10,
+    width: 50,
+    height: 50,
   },
 });
 

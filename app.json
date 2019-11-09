@@ -13,8 +13,8 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/orc_capacete.png",
-      "resizeMode": "contain",
+      "image": "./assets/orc_splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
