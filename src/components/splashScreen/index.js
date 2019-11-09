@@ -8,11 +8,7 @@ import {
   StyleSheet,
   Image,
   Animated,
-  Alert,
 } from 'react-native';
-import { ActivityIndicator } from 'react-native-paper';
-// import all the components we are going to use
-
 
 export default class App extends React.Component {
   state = {
@@ -38,7 +34,6 @@ export default class App extends React.Component {
 
     ).start(); // Starts the animation
 
-    setTimeout(() => { Alert.alert('Bem vindo.'); }, 2000);
   }
 
   render() {
