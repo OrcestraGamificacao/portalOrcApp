@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import styles from './styles';
-import DisplayMembers from '../../components/Membros/DisplayMembers';
+import DisplayMembers from '../../components/Members/DisplayMembers';
 
-export default class MEMBROS extends Component {
+export default class Members extends Component {
   static navigationOptions = {
     headerBackTitleVisible: false,
     headerTintColor: '#FFF',
@@ -30,6 +30,12 @@ export default class MEMBROS extends Component {
   };
 
   render() {
-    return <DisplayMembers />;
+    return (
+      <View>
+        <DisplayMembers rank="Presidência" />
+        <DisplayMembers rank="Diretores" />
+        <DisplayMembers rank="Assessores" />
+      </View>
+    );
   }
 }

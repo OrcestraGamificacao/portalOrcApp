@@ -3,23 +3,24 @@ import { fonts } from '~/styles';
 
 const styles = StyleSheet.create({
   name: {
-    fontSize: fonts.small,
+    fontSize: 18,
     color: '#000',
     fontFamily: 'monospace',
+    textAlign: 'center',
   },
   role: {
-    fontSize: fonts.tiny,
+    fontSize: 12,
     color: '#000',
     fontFamily: 'monospace',
+    textAlign: 'center',
+    marginBottom: 15,
   },
   member: {
     alignItems: 'center',
-    width: 76,
-    height: 76,
   },
   photo: {
-    width: 75,
-    height: 75,
+    width: 80,
+    height: 80,
     borderRadius: 50,
   },
 });
