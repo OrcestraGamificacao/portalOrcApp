@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View, ScrollView } from 'react-native';
 import styles from './styles';
 import DisplayMembers from '../../components/Members/DisplayMembers';
 
@@ -31,11 +31,11 @@ export default class Members extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView>
         <DisplayMembers rank="Presidência" />
         <DisplayMembers rank="Diretores" />
         <DisplayMembers rank="Assessores" />
-      </View>
+      </ScrollView>
     );
   }
 }

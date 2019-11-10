@@ -3,7 +3,7 @@ import { fonts } from '~/styles';
 
 const styles = StyleSheet.create({
   name: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#000',
     fontFamily: 'monospace',
     textAlign: 'center',

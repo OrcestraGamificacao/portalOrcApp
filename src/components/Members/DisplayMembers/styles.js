@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   rank: {
     fontSize: 25,
-    marginBottom: 23,
+    marginBottom: 10,
     marginLeft: 13,
     marginTop: 5,
   },

@@ -5,8 +5,77 @@ import { View, Text } from 'react-native';
 import styles from './styles';
 import Member from '../Member';
 
+const members = [
+  {
+    name: 'Saleh Nazih',
+    rank: 'Presidência',
+    department: 'Organizacional',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Calebe Rios',
+    rank: 'Presidência',
+    department: 'Institucional',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Luciana Ribeiro',
+    rank: 'Diretores',
+    department: 'Projetos',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Leonardo Takehana',
+    rank: 'Diretores',
+    department: 'Negócios',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Bruno Dantas',
+    rank: 'Diretores',
+    department: 'Marketing',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Alan Marques',
+    rank: 'Diretores',
+    department: 'Operações',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Brian Pina',
+    rank: 'Assessores',
+    department: 'Projetos',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Eric Akio',
+    rank: 'Assessores',
+    department: 'Marketing',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Fellipe Araújo',
+    rank: 'Assessores',
+    department: 'Negócios',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Daniela Soares',
+    rank: 'Assessores',
+    department: 'Operações',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+  {
+    name: 'Samuel Ávila',
+    rank: 'Assessores',
+    department: 'Marketing',
+    avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
+  },
+]
+
 const DisplayMembers = ({ rank }) => {
-  //const filteredMembers = members.filter((member) => member.rank === rank);
+  const filteredMembers = members.filter((member) => member.rank === rank);
   let rankStyle = null;
   let colNum = null;
   if (rank === 'Assessores') {
@@ -23,8 +92,7 @@ const DisplayMembers = ({ rank }) => {
     <View style={rankStyle}>
       <Text style={styles.rank}>{rank}</Text>
       <View style={styles.members}>
-        {/* filteredMembers.map((member, index) => (<View key={index.toString()} style={colNum}><Member avatar={member.avatar} name={member.name} role={member.department} /></View>)) */}
-        <Text>Para o display dos membros, basta que remova o comentário, e crie um array de nome "members" com os membros que você deseja</Text>
+        { filteredMembers.map((member, index) => (<View key={index.toString()} style={colNum}><Member avatar={member.avatar} name={member.name} role={member.department} /></View>)) }
       </View>
     </View>
   );
