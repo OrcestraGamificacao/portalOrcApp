@@ -5,6 +5,22 @@ import { colors } from '~/styles';
 
 import Main from '~/pages/Main';
 
+import Activities from '~/pages/ActivitiesPage';
+
+const ActivitiesStack = createStackNavigator(
+  { Activities },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
+);
+
 const Routes = createAppContainer(createStackNavigator(
   { Main },
   {
