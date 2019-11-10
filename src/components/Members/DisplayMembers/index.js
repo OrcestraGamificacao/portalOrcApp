@@ -72,7 +72,7 @@ const members = [
     department: 'Marketing',
     avatar: require('../../../../assets/Orc_estra_capacete_colorido.png'),
   },
-]
+];
 
 const DisplayMembers = ({ rank }) => {
   const filteredMembers = members.filter((member) => member.rank === rank);
