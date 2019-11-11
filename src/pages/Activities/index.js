@@ -31,12 +31,6 @@ export default class Activities extends Component {
   };
 
   render() {
-    return (
-      <View style={styles.ImageFrame}>
-        <Image
-        source={{uri:'https://via.placeholder.com/50'}} style={styles.Member}/>
-        <Text>...</Text>
-      </View>
-    );
+      
   }
 }
