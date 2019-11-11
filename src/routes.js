@@ -4,12 +4,20 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { colors } from '~/styles';
 
 import Main from '~/pages/Main';
-import Splash from '~/pages/splashScreen';
+import Splash from '~/components/splashScreen';
 import Login from '~/pages/Login';
 
 const Routes = createAppContainer(createStackNavigator(
-  { Login },
   {
+    Splash: {
+      screen: Splash,
+    },
+    Login: {
+      screen: Login,
+    },
+  },
+  {
+    initialRouteName: 'Splash',
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
     defaultNavigationOptions: {
@@ -20,5 +28,6 @@ const Routes = createAppContainer(createStackNavigator(
     },
   },
 ));
+
 
 export default Routes;

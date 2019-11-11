@@ -11,28 +11,33 @@ import {
 } from 'react-native';
 // import all the components we are going to use
 
-
 export default class App extends React.Component {
   state = {
     height: new Animated.Value(30), // Initial value for opacity: 0
     width: new Animated.Value(10), // Initial value for opacity: 0
   };
 
-  componentDidMount() {
-    Animated.timing(
-      this.state.width, // The animated value to drive
-      {
-        toValue: 360, // Animate to opacity: 1 (opaque)
-        duration: 100, // Make it take a while
-      },
-    ).start(); // Starts the animation
-    Animated.timing(
-      this.state.height, // The animated value to drive
-      {
-        toValue: 750, // Animate to opacity: 1 (opaque)
-        duration: 1800, // Make it take a while
-      },
-    ).start(); // Starts the animation
+  async componentDidMount() {
+    Animated.sequence([
+      Animated.timing(
+        this.state.width, // The animated value to drive
+        {
+          toValue: 360, // Animate to opacity: 1 (opaque)
+          duration: 100, // Make it take a while
+        },
+      ),
+      Animated.timing(
+        this.state.height, // The animated value to drive
+        {
+          toValue: 750, // Animate to opacity: 1 (opaque)
+          duration: 1800, // Make it take a while
+        },
+      ),
+    ]).start(() => {
+      // End of animations
+      // How to navigate to Login ? => Use StackNavigation
+      this.props.navigation.navigate('Login');
+    });
   }
 
   render() {
@@ -64,3 +69,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
 });
+
+App.navigationOptions = {
+  header: null,
+};
