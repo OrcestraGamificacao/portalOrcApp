@@ -1,61 +1,91 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-  Image, ScrollView, Text, StyleSheet, TouchableOpacity,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
 } from 'react-native';
+import CalendarPicker from 'react-native-calendar-picker';
+import { Formik } from 'formik';
 import { colors } from '~/styles';
-import TasksNavBar from '~/components/tasksNavBar';
-import TasksVencidas from '~/components/tasksVencidas';
-import TasksHoje from '~/components/tasksHoje';
-import TasksAmanha from '~/components/tasksAmanha';
-import TasksProximos from '~/components/tasksProximos';
-import styles from './styles';
 
-const Main = () => (
-  <ScrollView>
-    <TasksNavBar />
-    <TasksVencidas />
-    <TasksHoje />
-    <TasksAmanha />
-    <TasksProximos />
-  </ScrollView>
-);
 
-Main.navigationOptions = {
-  title: 'Tarefas',
-  headerLeft: (
-    <Image
-      style={styles.logoOrcStyle}
-      source={{
-        uri:
-          'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
-      }}
-    />
-  ),
-  headerRight: (
-    <TouchableOpacity
-      style={styles.addButtonStyle}
-    >
-      <Text style={styles.addButtonTextStyle}>+</Text>
-    </TouchableOpacity>
-  ),
-  headerBackTitleVisible: false,
-  headerTintColor: '#FFF',
-  headerBackground: (
-    <Image
-      style={StyleSheet.absoluteFill}
-      source={{
-        uri: 'https://i.imgur.com/oPgigXi.jpg',
-      }}
-    />
-  ),
-  headerStyle: {
-    backgroundColor: colors.greenOrcLight,
-    textAlign: 'center',
+export default class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedStartDate: null,
+    };
+    this.onDateChange = this.onDateChange.bind(this);
+  }
+
+  onDateChange(date) {
+    this.setState({
+      selectedStartDate: date,
+    });
+  }
+
+  render() {
+    const { selectedStartDate } = this.state;
+    const startDate = selectedStartDate ? selectedStartDate.toString() : '';
+    return (
+      <View style={styles.container}>
+
+        {/* <Formik
+          initialValues={{ email: '' }}
+          onSubmit={(values) => console.log(values)}
+        >
+          {({
+            handleChange, handleBlur, handleSubmit, values,
+          }) => (
+            <View>
+              <TextInput
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#000000', borderWidth: 1 }}
+                onChangeText={handleChange('email')}
+                onBlur={handleBlur('email')}
+                value={values.email}
+              />
+              <Button onPress={handleSubmit} title="Submit" />
+            </View>
+          )}
+        </Formik> */}
+
+        <CalendarPicker
+          style={styles.teste}
+          backgroundColor="blue"
+          selectedDayColor={colors.greenOrcDark}
+          selectedDayTextColor="white"
+          todayBackgroundColor={colors.greenOrcLight}
+          weekdays={['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']}
+          months={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']}
+          previousTitle=" <"
+          nextTitle="> "
+          textStyle={styles.calendarTextStyle}
+          onDateChange={this.onDateChange}
+        />
+
+        <View>
+          <Text>SELECTED DATE:{ startDate }</Text>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    marginTop: 100,
   },
-  headerTitleStyle: {
-    fontFamily: 'monospace',
-    fontSize: 30,
+  calendarTextStyle: {
+    fontSize: 18,
+    lineHeight: 20,
   },
-};
 
-export default Main;
+  teste: {
+    backgroundColor: 'red',
+
+  },
+});
