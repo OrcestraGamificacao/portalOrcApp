@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colors } from '~/styles';
+import { Member } from '~/components/Member';
 
 const styles = StyleSheet.create({
   logo: {
@@ -14,6 +15,9 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: colors.greenOrcLight,
     textAlign: 'center',
+  },
+  ImageFrame: {
+    borderRadius: 36,
   },
 });
 
