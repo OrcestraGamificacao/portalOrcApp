@@ -26,9 +26,20 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     fontSize: 10,
     color: '#474535',
+    marginTop: 4,
+  },
+  container: {
+    width: '95%',
   },
   activity: {
-    flexDirection: 'column',
+    flexDirection: 'row',
+    padding: 7,
+    marginTop: 11,
+    alignItems: 'center',
+  },
+  container_notifies: {
+    width: '90%',
+    marginLeft: 9,
   },
 });
 

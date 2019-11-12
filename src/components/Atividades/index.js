@@ -29,13 +29,13 @@ const mocks = [
 
 const Activity = () => {
   return (
-    <View>
+    <View style={styles.container}>
       {mocks.map(member => (
         <View style={styles.activity}>
-          <View style={styles.container_image}>
+          <View>
             <Image source={member.image} style={styles.image} />
           </View>
-          <View style={styles.container_notify}>
+          <View style={styles.container_notifies}>
             <Text style={styles.notify}>
               {member.name}
               {member.notify}
