@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Member from '../../components/Member';
-import {
-  View, Text, Image, StyleSheet,
-} from 'react-native';
+// import Member from '../../components/Member';
+import { Image, StyleSheet } from 'react-native';
+import Activity from '../../components/Atividades';
 import styles from './styles';
 
 export default class Activities extends Component {
@@ -23,7 +22,8 @@ export default class Activities extends Component {
     headerLeft: () => (
       <Image
         source={{
-          uri: 'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+          uri:
+            'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
         }}
         style={styles.logo}
       />
@@ -31,6 +31,6 @@ export default class Activities extends Component {
   };
 
   render() {
-      
+    return <Activity />;
   }
 }
