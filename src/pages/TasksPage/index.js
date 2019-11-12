@@ -5,17 +5,20 @@ import {
   View,
   TextInput,
   Button,
+  TouchableHighlight,
 } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
 import { Formik } from 'formik';
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
 import { colors } from '~/styles';
-
+import renderIf from './renderIf';
 
 export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedStartDate: null,
+      status: false,
     };
     this.onDateChange = this.onDateChange.bind(this);
   }
@@ -50,24 +53,32 @@ export default class Main extends Component {
             </View>
           )}
         </Formik> */}
+        <TouchableHighlight onPress={() => this.setState({ status: true })}>
+          <Text>
+            SELECTED DATE:{ startDate }
+          </Text>
+        </TouchableHighlight>
 
-        <CalendarPicker
-          style={styles.teste}
-          backgroundColor="blue"
-          selectedDayColor={colors.greenOrcDark}
-          selectedDayTextColor="white"
-          todayBackgroundColor={colors.greenOrcLight}
-          weekdays={['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']}
-          months={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']}
-          previousTitle=" <"
-          nextTitle="> "
-          textStyle={styles.calendarTextStyle}
-          onDateChange={this.onDateChange}
-        />
-
-        <View>
-          <Text>SELECTED DATE:{ startDate }</Text>
-        </View>
+        <Dialog
+          visible={this.state.status}
+          onTouchOutside={() => {
+            this.setState({ status: false });
+          }}
+        >
+          <DialogContent>
+            <CalendarPicker
+              selectedDayColor={colors.greenOrcDark}
+              selectedDayTextColor="white"
+              todayBackgroundColor={colors.greenOrcLight}
+              weekdays={['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']}
+              months={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']}
+              previousTitle=" <"
+              nextTitle="> "
+              textStyle={styles.calendarTextStyle}
+              onDateChange={this.onDateChange}
+            />
+          </DialogContent>
+        </Dialog>
       </View>
     );
   }
@@ -82,10 +93,5 @@ const styles = StyleSheet.create({
   calendarTextStyle: {
     fontSize: 18,
     lineHeight: 20,
-  },
-
-  teste: {
-    backgroundColor: 'red',
-
   },
 });
