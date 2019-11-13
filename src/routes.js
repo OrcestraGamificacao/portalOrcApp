@@ -5,11 +5,15 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
 
+<<<<<<< HEAD
 import Membros from './pages/Membros/index';
 import Activities from '~/pages/ActivitiesPage';
 import Tasks from '~/pages/Tasks';
 
 import Main from '~/pages/Main';
+=======
+import Main from '~/pages/TasksPage';
+>>>>>>> 26dac1d817713b665747e81d2882727131894b63
 
 Icon.loadFont();
 

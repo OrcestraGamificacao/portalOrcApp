@@ -10,24 +10,6 @@ import TasksAmanha from '~/components/tasksAmanha';
 import TasksProximos from '~/components/tasksProximos';
 import styles from './styles';
 
-const logoOrc = () => (
-  <Image
-    style={styles.logoOrcStyle}
-    source={{
-      uri:
-        'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
-    }}
-  />
-);
-
-const addButton = () => (
-  <TouchableOpacity
-    style={styles.addButtonStyle}
-  >
-    <Text style={styles.addButtonTextStyle}>+</Text>
-  </TouchableOpacity>
-);
-
 const Main = () => (
   <ScrollView>
     <TasksNavBar />
@@ -40,8 +22,22 @@ const Main = () => (
 
 Main.navigationOptions = {
   title: 'Tarefas',
-  headerLeft: logoOrc,
-  headerRight: addButton,
+  headerLeft: (
+    <Image
+      style={styles.logoOrcStyle}
+      source={{
+        uri:
+          'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+      }}
+    />
+  ),
+  headerRight: (
+    <TouchableOpacity
+      style={styles.addButtonStyle}
+    >
+      <Text style={styles.addButtonTextStyle}>+</Text>
+    </TouchableOpacity>
+  ),
   headerBackTitleVisible: false,
   headerTintColor: '#FFF',
   headerBackground: (

@@ -6,16 +6,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: '#FFF',
+    height: 42,
   },
+
   buttonContainer: {
     flex: 1,
     alignItems: 'center',
+    alignSelf: 'center',
   },
 
   buttonTextStyle: {
     fontSize: fonts.input,
     color: '#000',
-    fontFamily: 'monospace',
   },
 });
 
