@@ -6190,10 +6190,10 @@ react-native-gesture-handler@^1.4.1:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-paper@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-3.0.0.tgz#b7d667dcb38f5e69552db140c398f50ea46ee98e"
-  integrity sha512-cKnSAS3OsTf/vkb/HooPV+Cc4fCqxoB+Iael80+rvIZ28T5ARtI0HjFXKiTOsliGJPQsu9xaX8wdEg0F2nF6qA==
+react-native-paper@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-3.1.1.tgz#971f3097eecb4c061bf10768182b8985442a45ab"
+  integrity sha512-GHJ/2z/1Nzm4Y1g22Znu09BV7SV4tsR7h/9HrXuj3kFrsJo7zt5e+t/ELLLvycGEo4z1vhV6MtjtIk/PSaKoDA==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.5"
     color "^3.1.2"
@@ -6305,10 +6305,10 @@ react-native-web@^0.11.7:
     xmldoc "^0.4.0"
     yargs "^9.0.0"
 
-react-navigation-material-bottom-tabs@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-2.1.3.tgz#e8f746572f77952ee43ba6681d931154c3cc75e5"
-  integrity sha512-kVjZnBDXHmfK4X0eh/W5RPg5L3bzrkSHqTjg4RAXlPpqCaIbBUSCl2gQPz8owkE6mFfi9T2GwbKRI339C92Avw==
+react-navigation-material-bottom-tabs@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-2.1.5.tgz#ccf0571d042245649093b979e308995e3681dbcb"
+  integrity sha512-MGoVI63ekaU6MxL2FLF9q7n0R9dSGaMzp5PGE4PQCHB3XgN9zAL+gPOWNQFivhqSXHx45sL0oPuxnNOGt9IU3Q==
 
 react-navigation-stack@^1.9.4:
   version "1.9.4"
