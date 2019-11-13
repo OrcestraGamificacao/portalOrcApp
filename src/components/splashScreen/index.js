@@ -36,7 +36,7 @@ export default class App extends React.Component {
     ]).start(() => {
       // End of animations
       // How to navigate to Login ? => Use StackNavigation
-      this.props.navigation.navigate('Login');
+      this.props.navigation.navigate('Main');
     });
   }
 

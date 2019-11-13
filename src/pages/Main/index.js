@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import { View, StatusBar } from 'react-native';
@@ -14,7 +15,7 @@ const Main = () => (
 );
 
 Main.navigationOptions = {
-  title: 'Orc',
+  header: null,
 };
 
 export default Main;
