@@ -12,7 +12,7 @@ import TasksVencidas from '~/components/tasksVencidas';
 import TasksHoje from '~/components/tasksHoje';
 import TasksAmanha from '~/components/tasksAmanha';
 import TasksProximos from '~/components/tasksProximos';
-import styles from './styles';
+import styles from './styles'; 
 
 export default class Main extends Component {
   static navigationOptions = ({ navigation }) => ({
