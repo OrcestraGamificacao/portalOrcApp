@@ -2,6 +2,13 @@ import React from 'react';
 import {
   Image, ScrollView, Text, StyleSheet, TouchableOpacity,
 } from 'react-native';
+<<<<<<< HEAD
+=======
+// import Dialog from 'react-native-dialog';
+import Dialog, {
+ DialogContent, DialogTitle, DialogButton, DialogFooter 
+} from 'react-native-popup-dialog';
+>>>>>>> 0d44591918a0d3206ffaf8cafe01cd4cf4e7796f
 import { colors } from '~/styles';
 import TasksNavBar from '~/components/tasksNavBar';
 import TasksVencidas from '~/components/tasksVencidas';
@@ -58,6 +65,29 @@ Main.navigationOptions = {
   },
 };
 
+<<<<<<< HEAD
 export default Main;
+=======
+  render() {
+    return (
+      <ScrollView>
+        <Dialog
+          visible={this.state.visible}
+          dialogTitle={<DialogTitle title="Criar Nova Tarefa" />}
+          footer={
+<DialogFooter>
+  <DialogButton text="Detalhar" />       
+  <DialogButton text="Criar" color="colors.greenOrc" />
+</DialogFooter>
+          }
+          onTouchOutside={() => {
+            this.setState({ visible: false });
+          }}
+        >
+          <DialogContent>        
+            <Text>testando </Text>             
+          </DialogContent>
+        </Dialog>
+>>>>>>> 0d44591918a0d3206ffaf8cafe01cd4cf4e7796f
 
 // lol
