@@ -1,11 +1,49 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
+
+
+import Membros from './pages/Membros/index';
+import Activities from '~/pages/ActivitiesPage';
 
 import Main from '~/pages/Main';
 
-import Activities from '~/pages/ActivitiesPage';
+
+
+
+Icon.loadFont();
+
+
+const mainStack = createStackNavigator(
+  { Main },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
+);
+
+const MembrosStack = createStackNavigator(
+  { Membros },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
+);
 
 const ActivitiesStack = createStackNavigator(
   { Activities },
@@ -21,18 +59,111 @@ const ActivitiesStack = createStackNavigator(
   },
 );
 
-const Routes = createAppContainer(createStackNavigator(
-  { Main },
+
+// const TasksStack = createStackNavigator(
+//   { Tasks },
+//   {
+//   headerLayoutPreset: 'center',
+//   headerBackTitleVisible: false,
+//   defaultNavigationOptions: {
+//     headerStyle: {
+//       backgroundColor: colors.greenOrc,
+//     },
+//     headerTintColor: colors.duckYellow,
+//   },
+// },
+// );
+
+// const ProfileStack = createStackNavigator(
+//   { Profile },
+//   {
+//     headerLayoutPreset: 'center',
+//     headerBackTitleVisible: false,
+//     defaultNavigationOptions: {
+//     headerStyle: {
+//     backgroundColor: colors.greenOrc,
+//     },
+//     headerTintColor: colors.duckYellow,
+//   },
+// },
+// );
+
+
+const stackBottomTabNavigator = createMaterialBottomTabNavigator(
   {
-    headerLayoutPreset: 'center',
-    headerBackTitleVisible: false,
+    Inicio: {
+      screen: mainStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Inicio',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="home" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
+    Atividades: {
+      screen: ActivitiesStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Atividades',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="line-chart" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
+    // Tarefas: {
+    //   screen: TasksStack,
+    //   navigationOptions: () => ({
+    //     tabBarLabel: 'Tarefas',
+    //     tabBarIcon: ({ focused }) => (
+    //       <Icon name="check-square-o" type="Icon"
+    //        size={20} color={focused ? '#7AAF50' : '#808080'} />
+    //     ),
+    //   }),
+    // },
+    Membros: {
+      screen: MembrosStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Membros',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="group" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
+  //   Perfil: {
+  //     screen: ProfileStack,
+  //     navigationOptions: () => ({
+  //       tabBarLabel: 'Perfil',
+  //       tabBarIcon: ({ focused }) => (
+  //         <Icon name="user" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+  //       ),
+  //     }),
+  //   },
+  },
+  {
+    inicialRouteName: 'Home',
+    activeColor: '#7AAF50',
+    barStyle: { backgroundColor: '#DCDCDC' },
+    tabBarOptions: {
+      showIcon: true,
+      showLabel: true,
+
+    },
     defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: colors.greenOrc,
-      },
-      headerTintColor: colors.duckYellow,
+      tabBarVisible: 'off',
     },
   },
-));
+);
+
+const AppNavigator = createStackNavigator(
+  {
+    App: stackBottomTabNavigator,
+  },
+  {
+    defaultNavigationOptions: {
+      header: null,
+    },
+  },
+);
+
+const Routes = createAppContainer(AppNavigator);
 
 export default Routes;
