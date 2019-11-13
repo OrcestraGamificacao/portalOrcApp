@@ -13,7 +13,7 @@ const Main = () => (
 );
 
 Main.navigationOptions = {
-  title: 'Orc',
+  header: null,
 };
 
 export default Main;
