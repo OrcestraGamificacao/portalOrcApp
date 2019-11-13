@@ -7,13 +7,12 @@ import { colors } from '~/styles';
 
 
 import Membros from './pages/Membros/index';
+import Activities from '~/pages/ActivitiesPage';
 
 import Main from '~/pages/Main';
 
-import Activities from './pages/Activities';
 
-// import Tasks from './pages/Tasks';
-// import Profile from './pages/Profile';
+
 
 Icon.loadFont();
 
@@ -46,7 +45,7 @@ const MembrosStack = createStackNavigator(
   },
 );
 
-const ActivitiesSatck = createStackNavigator(
+const ActivitiesStack = createStackNavigator(
   { Activities },
   {
     headerLayoutPreset: 'center',
@@ -59,6 +58,7 @@ const ActivitiesSatck = createStackNavigator(
     },
   },
 );
+
 
 // const TasksStack = createStackNavigator(
 //   { Tasks },
@@ -101,7 +101,7 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
       }),
     },
     Atividades: {
-      screen: ActivitiesSatck,
+      screen: ActivitiesStack,
       navigationOptions: () => ({
         tabBarLabel: 'Atividades',
         tabBarIcon: ({ focused }) => (
