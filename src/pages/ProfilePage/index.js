@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Platform } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Platform,
+  TouchableOpacity,
+} from 'react-native';
 
 import { colors } from '~/styles';
 
@@ -61,7 +68,13 @@ export default class Profile extends Component {
             {'\n'}
           </Text>
         </View>
-        <Text style={styles.textCalendario}>Ver meu calendário</Text>
+        <TouchableOpacity>
+          <Text
+            onPress={() => this.props.navigation.navigate('Calendar')}
+            style={styles.textCalendario}>
+            Ver meu calendário
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
