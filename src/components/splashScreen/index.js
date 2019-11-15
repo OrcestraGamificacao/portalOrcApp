@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 // import all the components we are going to use
 
+import normalize from 'react-native-normalize';
+
 export default class App extends React.Component {
   state = {
     height: new Animated.Value(30), // Initial value for opacity: 0
@@ -22,15 +24,15 @@ export default class App extends React.Component {
       Animated.timing(
         this.state.width, // The animated value to drive
         {
-          toValue: 360, // Animate to opacity: 1 (opaque)
-          duration: 100, // Make it take a while
+          toValue: normalize(0), // Animate to opacity: 1 (opaque)
+          duration: normalize(0), // Make it take a while
         },
       ),
       Animated.timing(
         this.state.height, // The animated value to drive
         {
-          toValue: 750, // Animate to opacity: 1 (opaque)
-          duration: 1800, // Make it take a while
+          toValue: normalize(750), // Animate to opacity: 1 (opaque)
+          duration: normalize(1800), // Make it take a while
         },
       ),
     ]).start(() => {
