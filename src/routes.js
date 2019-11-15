@@ -5,17 +5,15 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
 
-
 import Members from './pages/MembersPage';
 import Activities from '~/pages/ActivitiesPage';
 
 import Main from '~/pages/Main';
 
-
-
+import Profile from '~/pages/ProfilePage';
+import Calendar from '~/pages/CalendarPage';
 
 Icon.loadFont();
-
 
 const mainStack = createStackNavigator(
   { Main },
@@ -59,7 +57,6 @@ const ActivitiesStack = createStackNavigator(
   },
 );
 
-
 // const TasksStack = createStackNavigator(
 //   { Tasks },
 //   {
@@ -74,20 +71,19 @@ const ActivitiesStack = createStackNavigator(
 // },
 // );
 
-// const ProfileStack = createStackNavigator(
-//   { Profile },
-//   {
-//     headerLayoutPreset: 'center',
-//     headerBackTitleVisible: false,
-//     defaultNavigationOptions: {
-//     headerStyle: {
-//     backgroundColor: colors.greenOrc,
-//     },
-//     headerTintColor: colors.duckYellow,
-//   },
-// },
-// );
-
+const ProfileStack = createStackNavigator(
+  { Profile, Calendar },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
+);
 
 const stackBottomTabNavigator = createMaterialBottomTabNavigator(
   {
@@ -96,7 +92,12 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: () => ({
         tabBarLabel: 'Inicio',
         tabBarIcon: ({ focused }) => (
-          <Icon name="home" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+          <Icon
+            name="home"
+            type="Icon"
+            size={20}
+            color={focused ? '#7AAF50' : '#808080'}
+          />
         ),
       }),
     },
@@ -105,7 +106,12 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: () => ({
         tabBarLabel: 'Atividades',
         tabBarIcon: ({ focused }) => (
-          <Icon name="line-chart" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+          <Icon
+            name="line-chart"
+            type="Icon"
+            size={20}
+            color={focused ? '#7AAF50' : '#808080'}
+          />
         ),
       }),
     },
@@ -124,19 +130,29 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: () => ({
         tabBarLabel: 'Membros',
         tabBarIcon: ({ focused }) => (
-          <Icon name="group" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
+          <Icon
+            name="group"
+            type="Icon"
+            size={20}
+            color={focused ? '#7AAF50' : '#808080'}
+          />
         ),
       }),
     },
-  //   Perfil: {
-  //     screen: ProfileStack,
-  //     navigationOptions: () => ({
-  //       tabBarLabel: 'Perfil',
-  //       tabBarIcon: ({ focused }) => (
-  //         <Icon name="user" type="Icon" size={20} color={focused ? '#7AAF50' : '#808080'} />
-  //       ),
-  //     }),
-  //   },
+    Perfil: {
+      screen: ProfileStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Perfil',
+        tabBarIcon: ({ focused }) => (
+          <Icon
+            name="user"
+            type="Icon"
+            size={20}
+            color={focused ? '#7AAF50' : '#808080'}
+          />
+        ),
+      }),
+    },
   },
   {
     inicialRouteName: 'Home',
@@ -145,7 +161,6 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
     tabBarOptions: {
       showIcon: true,
       showLabel: true,
-
     },
     defaultNavigationOptions: {
       tabBarVisible: 'off',
