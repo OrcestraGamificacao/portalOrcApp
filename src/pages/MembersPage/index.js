@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, View, ScrollView } from 'react-native';
+
+import {
+  View, Text, Image, StyleSheet,
+} from 'react-native';
 import styles from './styles';
-import DisplayMembers from '../../components/Members/DisplayMembers';
 
 export default class Members extends Component {
   static navigationOptions = {
@@ -15,14 +17,13 @@ export default class Members extends Component {
         }}
       />
     ),
-    title: 'Membros',
+    title: 'MEMBROS',
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
     headerLeft: () => (
       <Image
         source={{
-          uri:
-            'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+          uri: 'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
         }}
         style={styles.logo}
       />
@@ -31,11 +32,9 @@ export default class Members extends Component {
 
   render() {
     return (
-      <ScrollView>
-        <DisplayMembers rank="Presidência" />
-        <DisplayMembers rank="Diretores" />
-        <DisplayMembers rank="Assessores" />
-      </ScrollView>
+      <View>
+        <Text>...</Text>
+      </View>
     );
   }
 }
