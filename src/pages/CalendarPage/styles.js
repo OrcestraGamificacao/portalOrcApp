@@ -1,15 +1,23 @@
 import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  logo: {
-    width: 64,
-    height: 64,
-    marginLeft: 0,
-  },
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
   },
+
+  textHeader: {
+    fontSize: 30,
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Courier',
+      },
+      android: {
+        fontFamily: 'monospace',
+      },
+    }),
+  },
+
   textTitle: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -24,6 +32,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
+
   textBody: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -36,6 +45,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
+
   textBody2: {
     fontSize: 16,
     ...Platform.select({
@@ -47,9 +57,15 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  profilePic: {
+
+  calendarPic: {
+    width: '94%',
+    height: '34%',
+    marginTop: 37,
     alignItems: 'center',
+    marginLeft: 10,
   },
+
   textCalendario: {
     fontSize: 20,
     textAlign: 'right',
@@ -65,10 +81,17 @@ const styles = StyleSheet.create({
       },
     }),
   },
+
   textBlock: {
-    marginLeft: 50,
+    marginLeft: 12,
     textAlign: 'left',
-    marginTop: 210,
+    marginTop: 16,
+    lineHeight: 30,
+  },
+  textBlock2: {
+    marginTop: 100,
+    marginLeft: 12,
+    textAlign: 'left',
     lineHeight: 30,
   },
 });
