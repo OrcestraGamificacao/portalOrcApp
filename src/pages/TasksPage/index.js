@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Image, ScrollView, Text, StyleSheet, TouchableOpacity, View,
+  Image, ScrollView, Text, StyleSheet, TouchableOpacity, View, TextInput
 } from 'react-native';
 // import Dialog from 'react-native-dialog';
 import Dialog, {
@@ -59,6 +59,7 @@ export default class Main extends Component {
     super(props);
     this.state = {
       visible: false,
+      text: 'Escreva Aqui sua Tarefa',
     };
   }
 
@@ -84,8 +85,16 @@ export default class Main extends Component {
             this.setState({ visible: false });
           }}
         >
-          <DialogContent>        
-            <Text>testando </Text>             
+          <DialogContent
+              style={{height: 200, width: 410}}
+              > 
+            <TextInput
+              style={{height: 150, width: 350, borderColor: 'grey', borderWidth: 1, justifyContent: "center", }}
+              placeholder = "Escreva sua Tarefa Aqui"
+              onFocus= {() => this.setState({text : ''})}
+              />       
+             {/*onChangeText={(text) => this.setState({text})}*/}
+              {/*value={this.state.text}*/}            
           </DialogContent>
         </Dialog>
 
