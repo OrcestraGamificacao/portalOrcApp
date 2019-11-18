@@ -6,7 +6,7 @@ import { colors } from '~/styles';
 import TopTab from '~/components/tasksNavBar';
 import styles from './styles';
 
-const Tasks = () => (
+const Main = () => (
   <TopTab />
 );
 Main.navigationOptions = {
@@ -47,4 +47,4 @@ Main.navigationOptions = {
   },
 };
 
-export default Tasks;
+export default Main;
