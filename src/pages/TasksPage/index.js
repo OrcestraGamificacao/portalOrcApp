@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Image, ScrollView, Text, StyleSheet, TouchableOpacity, View, TextInput
+  Image, ScrollView, Text, StyleSheet, TouchableOpacity, View, TextInput,
 } from 'react-native';
 // import Dialog from 'react-native-dialog';
 import Dialog, {
- DialogContent, DialogTitle, DialogButton, DialogFooter 
+  DialogContent, DialogTitle, DialogButton, DialogFooter,
 } from 'react-native-popup-dialog';
 import { colors } from '~/styles';
 import TasksNavBar from '~/components/tasksNavBar';
@@ -74,27 +74,30 @@ export default class Main extends Component {
       <ScrollView>
         <Dialog
           visible={this.state.visible}
+          dialogStyle={{ marginTop: -400 }}
           dialogTitle={<DialogTitle title="Criar Nova Tarefa" />}
-          footer={
-<DialogFooter>
-  <DialogButton text="Detalhar" />       
-  <DialogButton text="Criar" color="colors.greenOrc" />
-</DialogFooter>
-          }
+          footer={(
+            <DialogFooter>
+              <DialogButton text="Detalhar" />
+              <DialogButton text="Criar" color="colors.greenOrc" />
+            </DialogFooter>
+          )}
           onTouchOutside={() => {
             this.setState({ visible: false });
           }}
         >
           <DialogContent
-              style={{height: 200, width: 410}}
-              > 
+            style={{ height: 200, width: 410 }}
+          >
             <TextInput
-              style={{height: 150, width: 350, borderColor: 'grey', borderWidth: 1, justifyContent: "center", }}
-              placeholder = "Escreva sua Tarefa Aqui"
-              onFocus= {() => this.setState({text : ''})}
-              />       
-             {/*onChangeText={(text) => this.setState({text})}*/}
-              {/*value={this.state.text}*/}            
+              style={{
+                height: 150, width: 350, borderColor: 'grey', borderWidth: 1, justifyContent: 'center',
+              }}
+              placeholder="Escreva sua Tarefa Aqui"
+              onFocus={() => this.setState({ text: '' })}
+            />
+            {/* onChangeText={(text) => this.setState({text})} */}
+            {/* value={this.state.text} */}
           </DialogContent>
         </Dialog>
 
