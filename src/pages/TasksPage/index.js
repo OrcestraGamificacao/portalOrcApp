@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 import {
   Image, ScrollView, Text, StyleSheet, TouchableOpacity, View, TextInput,
 } from 'react-native';
-// import Dialog from 'react-native-dialog';
 import Dialog, {
   DialogContent, DialogTitle, DialogButton, DialogFooter,
 } from 'react-native-popup-dialog';
 import { colors } from '~/styles';
-import TasksNavBar from '~/components/tasksNavBar';
-import TasksVencidas from '~/components/tasksVencidas';
-import TasksHoje from '~/components/tasksHoje';
-import TasksAmanha from '~/components/tasksAmanha';
-import TasksProximos from '~/components/tasksProximos';
+import TopTab from '~/components/tasksNavBar';
 import styles from './styles';
 
 export default class Main extends Component {
@@ -94,12 +89,7 @@ export default class Main extends Component {
             />
           </DialogContent>
         </Dialog>
-
-        <TasksNavBar />
-        <TasksVencidas />
-        <TasksHoje />
-        <TasksAmanha />
-        <TasksProximos />
+        <TopTab/>
       </ScrollView>
     );
   }
