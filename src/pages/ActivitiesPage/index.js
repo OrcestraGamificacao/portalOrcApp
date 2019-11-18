@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
 import {
-  View, Text, Image, StyleSheet,
+  Image, StyleSheet,
 } from 'react-native';
+import Activity from '../../components/Atividades';
 import styles from './styles';
 
 export default class Activities extends Component {
@@ -31,10 +31,6 @@ export default class Activities extends Component {
   };
 
   render() {
-    return (
-      <View>
-        <Text>...</Text>
-      </View>
-    );
+    return <Activity />;
   }
 }

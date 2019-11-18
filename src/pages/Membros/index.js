@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import {
-  View, Text, Image, StyleSheet,
+  Image, StyleSheet,
 } from 'react-native';
 import styles from './styles';
+import Member from '../../components/Member';
 
 export default class MEMBROS extends Component {
   static navigationOptions = {
@@ -30,11 +31,8 @@ export default class MEMBROS extends Component {
     ),
   };
 
+
   render() {
-    return (
-      <View>
-        <Text>...</Text>
-      </View>
-    );
+    return <Member />;
   }
 }

@@ -5,7 +5,7 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
 
-import Membros from './pages/Membros/index';
+import Membros from './pages/Membros';
 import Activities from '~/pages/ActivitiesPage';
 
 import Main from '~/pages/Main';
