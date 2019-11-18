@@ -6,12 +6,13 @@ import {
   TextInput,
   Button,
   TouchableHighlight,
+  Dimensions,
 } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
-import { Formik } from 'formik';
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
-import { colors } from '~/styles';
-import renderIf from './renderIf';
+import { colors, fonts } from '~/styles';
+
+const windowWidth = Dimensions.get('window').width;
 
 export default class Main extends Component {
   constructor(props) {
@@ -34,30 +35,37 @@ export default class Main extends Component {
     const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     return (
       <View style={styles.container}>
-
-        {/* <Formik
-          initialValues={{ email: '' }}
-          onSubmit={(values) => console.log(values)}
+        <View>
+          <TextInput
+            style={styles.textInputStyle}
+            placeholder="Escreva sua Tarefa aqui"
+            textAlignVertical="top"
+          />
+        </View>
+        <TouchableHighlight
+          onPress={() => this.setState({ status: true })}
+          style={styles.textInputStyle}
         >
-          {({
-            handleChange, handleBlur, handleSubmit, values,
-          }) => (
-            <View>
-              <TextInput
-                style={{ backgroundColor: '#FFFFFF', borderColor: '#000000', borderWidth: 1 }}
-                onChangeText={handleChange('email')}
-                onBlur={handleBlur('email')}
-                value={values.email}
-              />
-              <Button onPress={handleSubmit} title="Submit" />
-            </View>
-          )}
-        </Formik> */}
-        <TouchableHighlight onPress={() => this.setState({ status: true })}>
-          <Text>
-            SELECTED DATE:{ startDate }
+          <Text style={styles.calendarButtonTextStyle}>
+            Data limite:{ startDate }
           </Text>
         </TouchableHighlight>
+
+        <View>
+          <TextInput
+            style={styles.textInputStyle}
+            placeholder="Adicione um responsável"
+            textAlignVertical="top"
+          />
+        </View>
+
+        <View>
+          <TextInput
+            style={styles.textInputStyle}
+            placeholder="Coloque mais alguma info"
+            textAlignVertical="top"
+          />
+        </View>
 
         <Dialog
           visible={this.state.status}
@@ -88,10 +96,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    marginTop: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
   },
   calendarTextStyle: {
     fontSize: 18,
     lineHeight: 20,
+  },
+  textInputStyle: {
+    width: windowWidth * 0.9,
+    borderColor: 'grey',
+    borderWidth: 1,
+    justifyContent: 'center',
+    paddingLeft: 20,
+    paddingTop: 10,
+    fontSize: fonts.input,
+    margin: 10,
+  },
+  calendarButtonTextStyle: {
+    paddingLeft: 20,
+    paddingTop: 10,
+    alignItems: 'center',
   },
 });
