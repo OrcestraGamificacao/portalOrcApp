@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator, createSwitchNavigator } from 'react-navigation-stack';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
@@ -126,10 +126,10 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Tarefas',
         tabBarIcon: ({ focused }) => (
           <Icon
-name="check-square-o"
-type="Icon"
+            name="check-square-o"
+            type="Icon"
             size={20}
-color={focused ? '#7AAF50' : '#808080'}
+            color={focused ? '#7AAF50' : '#808080'}
           />
         ),
       }),
