@@ -59,7 +59,6 @@ export default class Main extends Component {
     super(props);
     this.state = {
       visible: false,
-      text: 'Escreva Aqui sua Tarefa',
     };
   }
 
@@ -74,12 +73,11 @@ export default class Main extends Component {
       <ScrollView>
         <Dialog
           visible={this.state.visible}
-          dialogStyle={{ marginTop: -400 }}
-          dialogTitle={<DialogTitle title="Criar Nova Tarefa" />}
+          dialogTitle={<DialogTitle title="Nova Tarefa" />}
           footer={(
             <DialogFooter>
               <DialogButton text="Detalhar" />
-              <DialogButton text="Criar" color="colors.greenOrc" />
+              <DialogButton text="Salvar" />
             </DialogFooter>
           )}
           onTouchOutside={() => {
@@ -87,17 +85,13 @@ export default class Main extends Component {
           }}
         >
           <DialogContent
-            style={{ height: 200, width: 410 }}
+            style={{ height: 200 }}
           >
             <TextInput
-              style={{
-                height: 150, width: 350, borderColor: 'grey', borderWidth: 1, justifyContent: 'center',
-              }}
+              style={styles.textInputStyle}
               placeholder="Escreva sua Tarefa Aqui"
-              onFocus={() => this.setState({ text: '' })}
+              textAlignVertical="top"
             />
-            {/* onChangeText={(text) => this.setState({text})} */}
-            {/* value={this.state.text} */}
           </DialogContent>
         </Dialog>
 
