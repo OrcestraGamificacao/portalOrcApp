@@ -1,21 +1,23 @@
 import { StyleSheet } from 'react-native';
-import { fonts } from '~/styles';
+import { colors, fonts } from '~/styles';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: '#FFF',
-    height: 42,
+    backgroundColor: colors.greenOrcLight,
   },
-
-  buttonContainer: {
+  flexContainer: {
     flex: 1,
-    alignItems: 'center',
-    alignSelf: 'center',
   },
 
-  buttonTextStyle: {
+  titleTextStyle: {
+    fontSize: fonts.input,
+    color: '#000',
+    paddingLeft: 25,
+  },
+
+  textStyle: {
     fontSize: fonts.input,
     color: '#000',
   },

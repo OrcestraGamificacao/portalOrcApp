@@ -6,7 +6,7 @@ import {
 import { CheckBox } from 'react-native-elements';
 import styles from './styles';
 
-export default class TasksVencidas extends Component {
+export default class TaskDelegada extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +25,7 @@ export default class TasksVencidas extends Component {
       <View>
         <View style={styles.container}>
           <View style={styles.flexContainer}>
-            <Text style={styles.titleTextStyle}>Vencidas</Text>
+            <Text style={styles.titleTextStyle}>insira o nome aqui</Text>
           </View>
         </View>
         <View>

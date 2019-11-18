@@ -14,6 +14,12 @@ export default class TasksHoje extends Component {
     };
   }
 
+  onPress = () => {
+    this.setState({
+      checked: !this.state.checked,
+    });
+  }
+
   render() {
     return (
       <View>
@@ -26,12 +32,14 @@ export default class TasksHoje extends Component {
           <CheckBox
             title="Nome da tarefa aqui"
             checked={this.state.checked}
+            onPress={this.onPress}
             size={30}
             textStyle={styles.textStyle}
           />
           <CheckBox
             title="Nome da tarefa aqui"
             checked={this.state.checked}
+            onPress={this.onPress}
             size={30}
             textStyle={styles.textStyle}
           />
