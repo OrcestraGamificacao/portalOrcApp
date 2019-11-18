@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import {
-  Image, StyleSheet,
-} from 'react-native';
-import Activity from '../../components/Atividades';
+import { Image, StyleSheet } from 'react-native';
 import styles from './styles';
+import DisplayMembers from '../../components/Members/DisplayMembers';
 
-export default class Activities extends Component {
+export default class MEMBROS extends Component {
   static navigationOptions = {
     headerBackTitleVisible: false,
     headerTintColor: '#FFF',
@@ -17,13 +15,14 @@ export default class Activities extends Component {
         }}
       />
     ),
-    title: 'Atividades',
+    title: 'Membros',
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
     headerLeft: () => (
       <Image
         source={{
-          uri: 'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+          uri:
+            'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
         }}
         style={styles.logo}
       />
@@ -31,6 +30,6 @@ export default class Activities extends Component {
   };
 
   render() {
-    return <Activity />;
+    return <DisplayMembers />;
   }
 }
