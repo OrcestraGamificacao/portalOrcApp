@@ -7,6 +7,7 @@ import { colors } from '~/styles';
 
 import Members from './pages/MembersPage';
 import Activities from '~/pages/ActivitiesPage';
+import Tasks from '~/pages/TasksPage';
 
 import Main from '~/pages/Main';
 
@@ -57,19 +58,19 @@ const ActivitiesStack = createStackNavigator(
   },
 );
 
-// const TasksStack = createStackNavigator(
-//   { Tasks },
-//   {
-//   headerLayoutPreset: 'center',
-//   headerBackTitleVisible: false,
-//   defaultNavigationOptions: {
-//     headerStyle: {
-//       backgroundColor: colors.greenOrc,
-//     },
-//     headerTintColor: colors.duckYellow,
-//   },
-// },
-// );
+const TasksStack = createStackNavigator(
+  { Tasks },
+  {
+  headerLayoutPreset: 'center',
+  headerBackTitleVisible: false,
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: colors.greenOrc,
+    },
+    headerTintColor: colors.duckYellow,
+  },
+},
+);
 
 const ProfileStack = createStackNavigator(
   { Profile, Calendar },
@@ -115,16 +116,16 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
         ),
       }),
     },
-    // Tarefas: {
-    //   screen: TasksStack,
-    //   navigationOptions: () => ({
-    //     tabBarLabel: 'Tarefas',
-    //     tabBarIcon: ({ focused }) => (
-    //       <Icon name="check-square-o" type="Icon"
-    //        size={20} color={focused ? '#7AAF50' : '#808080'} />
-    //     ),
-    //   }),
-    // },
+    Tarefas: {
+      screen: TasksStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Tarefas',
+        tabBarIcon: ({ focused }) => (
+          <Icon name="check-square-o" type="Icon"
+           size={20} color={focused ? '#7AAF50' : '#808080'} />
+        ),
+      }),
+    },
     Membros: {
       screen: MembersStack,
       navigationOptions: () => ({
