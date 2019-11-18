@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, Image, StyleSheet,
+  Text, Image, StyleSheet,
 } from 'react-native';
 import styles from './styles';
 
