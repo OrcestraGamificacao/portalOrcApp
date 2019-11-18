@@ -6,7 +6,7 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
 
-import Membros from '~/pages/MembrosPage';
+import Members from './pages/MembersPage';
 import Activities from '~/pages/ActivitiesPage';
 import Tasks from '~/pages/TasksPage';
 
@@ -34,8 +34,8 @@ const mainStack = createStackNavigator(
   },
 );
 
-const MembrosStack = createStackNavigator(
-  { Membros },
+const MembersStack = createStackNavigator(
+  { Members },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
@@ -135,7 +135,7 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
       }),
     },
     Membros: {
-      screen: MembrosStack,
+      screen: MembersStack,
       navigationOptions: () => ({
         tabBarLabel: 'Membros',
         tabBarIcon: ({ focused }) => (

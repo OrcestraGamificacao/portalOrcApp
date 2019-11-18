@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
 import {
-  View, Text, Image, StyleSheet,
+  Text, Image, StyleSheet,
 } from 'react-native';
 import styles from './styles';
 
@@ -31,10 +30,6 @@ export default class Activities extends Component {
   };
 
   render() {
-    return (
-      <View>
-        <Text>...</Text>
-      </View>
-    );
+    return <Text>...</Text>;
   }
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 import {
-  View, Text, Image, StyleSheet,
+  ScrollView, Text, Image, StyleSheet,
 } from 'react-native';
+import DisplayMembers from '../../components/Members/DisplayMembers';
 import styles from './styles';
 
-export default class Activities extends Component {
+export default class Members extends Component {
   static navigationOptions = {
     headerBackTitleVisible: false,
     headerTintColor: '#FFF',
@@ -17,7 +18,7 @@ export default class Activities extends Component {
         }}
       />
     ),
-    title: 'Atividades',
+    title: 'Membros',
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
     headerLeft: () => (
@@ -32,9 +33,11 @@ export default class Activities extends Component {
 
   render() {
     return (
-      <View>
-        <Text>...</Text>
-      </View>
+      <ScrollView>
+        <DisplayMembers rank="Presidência" />
+        <DisplayMembers rank="Diretores" />
+        <DisplayMembers rank="Assessores" />
+      </ScrollView>
     );
   }
 }
