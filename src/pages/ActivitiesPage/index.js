@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Image, StyleSheet,
-} from 'react-native';
 import Activity from '../../components/Atividades';
 import styles from './styles';
+import {Image, StyleSheet} from 'react-native';
 
 export default class Activities extends Component {
   static navigationOptions = {

@@ -5,8 +5,9 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '~/styles';
 
-import Membros from './pages/Membros';
+import Members from './pages/MembersPage';
 import Activities from '~/pages/ActivitiesPage';
+import Tasks from '~/pages/TasksPage';
 
 import Main from '~/pages/Main';
 
@@ -29,8 +30,8 @@ const mainStack = createStackNavigator(
   },
 );
 
-const MembrosStack = createStackNavigator(
-  { Membros },
+const MembersStack = createStackNavigator(
+  { Members },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
@@ -57,19 +58,19 @@ const ActivitiesStack = createStackNavigator(
   },
 );
 
-// const TasksStack = createStackNavigator(
-//   { Tasks },
-//   {
-//   headerLayoutPreset: 'center',
-//   headerBackTitleVisible: false,
-//   defaultNavigationOptions: {
-//     headerStyle: {
-//       backgroundColor: colors.greenOrc,
-//     },
-//     headerTintColor: colors.duckYellow,
-//   },
-// },
-// );
+const TasksStack = createStackNavigator(
+  { Tasks },
+  {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: colors.greenOrc,
+      },
+      headerTintColor: colors.duckYellow,
+    },
+  },
+);
 
 const ProfileStack = createStackNavigator(
   { Profile, Calendar },
@@ -115,18 +116,22 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
         ),
       }),
     },
-    // Tarefas: {
-    //   screen: TasksStack,
-    //   navigationOptions: () => ({
-    //     tabBarLabel: 'Tarefas',
-    //     tabBarIcon: ({ focused }) => (
-    //       <Icon name="check-square-o" type="Icon"
-    //        size={20} color={focused ? '#7AAF50' : '#808080'} />
-    //     ),
-    //   }),
-    // },
+    Tarefas: {
+      screen: TasksStack,
+      navigationOptions: () => ({
+        tabBarLabel: 'Tarefas',
+        tabBarIcon: ({ focused }) => (
+          <Icon
+name="check-square-o"
+type="Icon"
+            size={20}
+color={focused ? '#7AAF50' : '#808080'}
+          />
+        ),
+      }),
+    },
     Membros: {
-      screen: MembrosStack,
+      screen: MembersStack,
       navigationOptions: () => ({
         tabBarLabel: 'Membros',
         tabBarIcon: ({ focused }) => (
