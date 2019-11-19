@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Image } from 'react-native';
 import styles from './styles';
-
-
 
 const Member = (props) => (
   <View style={styles.member}>
