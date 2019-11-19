@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Text, Image, StyleSheet,
-} from 'react-native';
+import Activity from '../../components/Atividades';
 import styles from './styles';
+import {Image, StyleSheet} from 'react-native';
 
 export default class Activities extends Component {
   static navigationOptions = {
@@ -30,6 +29,6 @@ export default class Activities extends Component {
   };
 
   render() {
-    return <Text>...</Text>;
+    return <Activity />;
   }
 }
