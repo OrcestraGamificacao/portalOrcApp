@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, StatusBar } from 'react-native';
+import { View } from 'react-native';
 import styles from './style';
 
 import LoginScreen from '../../components/Login';

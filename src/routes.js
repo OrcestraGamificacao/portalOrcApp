@@ -12,7 +12,7 @@ import Tasks from '~/pages/TasksPage';
 
 import Main from '~/pages/Main';
 import Splash from '~/components/splashScreen';
-import Login from '~/pages/Login';
+import Login from '~/pages/LoginPage';
 
 import Profile from '~/pages/ProfilePage';
 import Calendar from '~/pages/CalendarPage';
@@ -173,6 +173,7 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
     },
     defaultNavigationOptions: {
       tabBarVisible: 'off',
+      shifting: false,
     },
   },
 );
