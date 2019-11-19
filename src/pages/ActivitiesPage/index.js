@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {
   Image, StyleSheet,
-} from 'react-native';
+
+
+}
+  from 'react-native';
 import Activity from '../../components/Atividades';
 import styles from './styles';
 
