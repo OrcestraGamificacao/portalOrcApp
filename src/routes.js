@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -10,6 +11,8 @@ import Activities from '~/pages/ActivitiesPage';
 import Tasks from '~/pages/TasksPage';
 
 import Main from '~/pages/Main';
+import Splash from '~/components/splashScreen';
+import Login from '~/pages/LoginPage';
 
 import Profile from '~/pages/ProfilePage';
 import Calendar from '~/pages/CalendarPage';
@@ -19,6 +22,7 @@ Icon.loadFont();
 const mainStack = createStackNavigator(
   { Main },
   {
+    initialRouteName: 'Main',
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,
     defaultNavigationOptions: {
@@ -122,10 +126,10 @@ const stackBottomTabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Tarefas',
         tabBarIcon: ({ focused }) => (
           <Icon
-name="check-square-o"
-type="Icon"
+            name="check-square-o"
+            type="Icon"
             size={20}
-color={focused ? '#7AAF50' : '#808080'}
+            color={focused ? '#7AAF50' : '#808080'}
           />
         ),
       }),
@@ -169,15 +173,23 @@ color={focused ? '#7AAF50' : '#808080'}
     },
     defaultNavigationOptions: {
       tabBarVisible: 'off',
+      shifting: false,
     },
   },
 );
 
-const AppNavigator = createStackNavigator(
+const AppNavigator = createSwitchNavigator(
   {
     App: stackBottomTabNavigator,
+    Splash: {
+      screen: Splash,
+    },
+    Login: {
+      screen: Login,
+    },
   },
   {
+    initialRouteName: 'Splash',
     defaultNavigationOptions: {
       header: null,
     },
@@ -185,5 +197,6 @@ const AppNavigator = createStackNavigator(
 );
 
 const Routes = createAppContainer(AppNavigator);
+
 
 export default Routes;
