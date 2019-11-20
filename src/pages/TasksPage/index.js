@@ -9,7 +9,7 @@ import { colors } from '~/styles';
 import TopTab from '~/components/tasksNavBar';
 import styles from './styles';
 
-export default class Main extends Component {
+export default class Tasks extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'Tarefas',
     headerLeft: (
@@ -45,7 +45,6 @@ export default class Main extends Component {
       textAlign: 'center',
     },
     headerTitleStyle: {
-      fontFamily: 'monospace',
       fontSize: 30,
     },
   });
@@ -89,7 +88,7 @@ export default class Main extends Component {
             />
           </DialogContent>
         </Dialog>
-        <TopTab/>
+        <TopTab />
       </ScrollView>
     );
   }

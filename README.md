@@ -12,7 +12,3 @@ bem como fornecer um ambiente para que os membros possam ter acesso ao status da
 Para contribuir acesse o nosso [Guia de Contribuição](CONTRIBUTING.md) e escolha uma issue para trabalhar. 
 
 ## Como rodar:
-
-```$ expo start```
-ou
-```$ yarn start```
