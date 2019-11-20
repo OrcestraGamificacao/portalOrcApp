@@ -4,9 +4,10 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { colors } from '~/styles';
 
 import Main from '~/pages/TasksPage';
+import Calendario from '~/pages/TasksPage/Calendario';
 
 const Routes = createAppContainer(createStackNavigator(
-  { Main },
+  { Main, Calendario },
   {
     headerLayoutPreset: 'center',
     headerBackTitleVisible: false,

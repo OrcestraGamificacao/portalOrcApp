@@ -1,122 +1,78 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Button,
-  TouchableHighlight,
-  Dimensions,
+  Image, ScrollView, Text, StyleSheet, TouchableOpacity, Button,
 } from 'react-native';
-import CalendarPicker from 'react-native-calendar-picker';
-import Dialog, { DialogContent } from 'react-native-popup-dialog';
-import { colors, fonts } from '~/styles';
-
-const windowWidth = Dimensions.get('window').width;
+import { colors } from '~/styles';
+import TasksNavBar from '~/components/tasksNavBar';
+import TasksVencidas from '~/components/tasksVencidas';
+import TasksHoje from '~/components/tasksHoje';
+import TasksAmanha from '~/components/tasksAmanha';
+import TasksProximos from '~/components/tasksProximos';
+import styles from './styles';
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedStartDate: null,
-      status: false,
-    };
-    this.onDateChange = this.onDateChange.bind(this);
-  }
-
-  onDateChange(date) {
-    this.setState({
-      selectedStartDate: date,
-    });
-  }
-
   render() {
-    const { selectedStartDate } = this.state;
-    const startDate = selectedStartDate ? selectedStartDate.toString() : '';
     return (
-      <View style={styles.container}>
-        <View>
-          <TextInput
-            style={styles.textInputStyle}
-            placeholder="Escreva sua Tarefa aqui"
-            textAlignVertical="top"
-          />
-        </View>
-        <TouchableHighlight
-          onPress={() => this.setState({ status: true })}
-          style={styles.textInputStyle}
-        >
-          <Text style={styles.calendarButtonTextStyle}>
-            Data limite:{ startDate }
-          </Text>
-        </TouchableHighlight>
 
-        <View>
-          <TextInput
-            style={styles.textInputStyle}
-            placeholder="Adicione um responsável"
-            textAlignVertical="top"
-          />
-        </View>
+      <ScrollView>
+        <TasksNavBar />
+        <TasksVencidas />
+        <Button
+          title="vai"
+          onPress={() => this.props.navigation.navigate('Calendario')
+          /*this.props.navigation.setParams({
+            headerRight: (
+              <TouchableOpacity
+                  style={styles.addButtonStyle}
+                >
+                  <Text style={styles.addButtonTextStyle}>-</Text>
+                </TouchableOpacity>
+            ),
+          }) */}
+        />
 
-        <View>
-          <TextInput
-            style={styles.textInputStyle}
-            placeholder="Coloque mais alguma info"
-            textAlignVertical="top"
-          />
-        </View>
-
-        <Dialog
-          visible={this.state.status}
-          onTouchOutside={() => {
-            this.setState({ status: false });
-          }}
-        >
-          <DialogContent>
-            <CalendarPicker
-              selectedDayColor={colors.greenOrcDark}
-              selectedDayTextColor="white"
-              todayBackgroundColor={colors.greenOrcLight}
-              weekdays={['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']}
-              months={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']}
-              previousTitle=" <"
-              nextTitle="> "
-              textStyle={styles.calendarTextStyle}
-              onDateChange={this.onDateChange}
-            />
-          </DialogContent>
-        </Dialog>
-      </View>
+        <TasksHoje />
+        <TasksAmanha />
+        <TasksProximos />
+      </ScrollView>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent: 'center',
+
+Main.navigationOptions = {
+  title: 'Tarefas',
+  headerLeft: (
+    <Image
+      style={styles.logoOrcStyle}
+      source={{
+        uri:
+          'https://user-images.githubusercontent.com/54643355/67619110-d119dc00-f7cd-11e9-9377-40b7c21424fe.png',
+      }}
+    />
+  ),
+  headerRight: (
+    <TouchableOpacity
+      style={styles.addButtonStyle}
+    >
+      <Text style={styles.addButtonTextStyle}>+</Text>
+    </TouchableOpacity>
+  ),
+  headerBackTitleVisible: false,
+  headerTintColor: '#FFF',
+  headerBackground: (
+    <Image
+      style={StyleSheet.absoluteFill}
+      source={{
+        uri: 'https://i.imgur.com/oPgigXi.jpg',
+      }}
+    />
+  ),
+  headerStyle: {
+    backgroundColor: colors.greenOrcLight,
+    textAlign: 'center',
   },
-  calendarTextStyle: {
-    fontSize: 18,
-    lineHeight: 20,
+  headerTitleStyle: {
+    fontSize: 30,
   },
-  textInputStyle: {
-    width: windowWidth * 0.9,
-    borderColor: 'grey',
-    borderWidth: 1,
-    justifyContent: 'center',
-    paddingLeft: 20,
-    paddingTop: 10,
-    fontSize: fonts.input,
-    margin: 10,
-  },
-  calendarButtonTextStyle: {
-    paddingLeft: 20,
-    paddingTop: 10,
-    alignItems: 'center',
-  },
-});
+};
