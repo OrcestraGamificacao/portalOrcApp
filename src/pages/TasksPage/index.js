@@ -20,7 +20,7 @@ export default class Main extends Component {
         <Button
           title="vai"
           onPress={() => this.props.navigation.navigate('Calendario')
-          /*this.props.navigation.setParams({
+          /* this.props.navigation.setParams({
             headerRight: (
               <TouchableOpacity
                   style={styles.addButtonStyle}

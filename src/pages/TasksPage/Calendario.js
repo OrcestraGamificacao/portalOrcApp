@@ -3,7 +3,9 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TextInput,
+  TouchableOpacity,
   Button,
   TouchableHighlight,
   Dimensions,
@@ -120,3 +122,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+Calendario.navigationOptions = {
+  title: 'Detalhar',
+  headerLeft: (
+    <TouchableOpacity
+      style={styles.addButtonStyle}
+    >
+      <Text style={styles.addButtonTextStyle} onPress={() => this.props.navigation.goBack()}>X</Text>
+    </TouchableOpacity>
+  ),
+  headerRight: (
+    <TouchableOpacity
+      style={styles.addButtonStyle}
+    >
+      <Text style={styles.addButtonTextStyle}>+</Text>
+    </TouchableOpacity>
+  ),
+  headerBackTitleVisible: false,
+  headerTintColor: '#FFF',
+  headerBackground: (
+    <Image
+      style={StyleSheet.absoluteFill}
+      source={{
+        uri: 'https://i.imgur.com/oPgigXi.jpg',
+      }}
+    />
+  ),
+  headerStyle: {
+    backgroundColor: colors.greenOrcLight,
+    textAlign: 'center',
+  },
+  headerTitleStyle: {
+    fontSize: 30,
+  },
+};
