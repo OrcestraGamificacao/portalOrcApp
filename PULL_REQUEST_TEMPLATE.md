@@ -15,12 +15,11 @@ O conteúdo do pull request deve ser constituído de uma lista contendo as princ
 ```
 Nesse pull request foi feito:
 
-História #25
 Issue #32
 Correção de bugs
 ```
 
-Adicionar o pipeline, os revisores, que serão integrantes de EPS, e as labels se for necessário.
+Adicionar o pipeline, os revisores e as labels se for necessário.
 
 
 ### Condição

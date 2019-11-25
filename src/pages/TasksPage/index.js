@@ -3,20 +3,15 @@ import {
   Image, ScrollView, Text, StyleSheet, TouchableOpacity, Button,
 } from 'react-native';
 import { colors } from '~/styles';
-import TasksNavBar from '~/components/tasksNavBar';
-import TasksVencidas from '~/components/tasksVencidas';
-import TasksHoje from '~/components/tasksHoje';
-import TasksAmanha from '~/components/tasksAmanha';
-import TasksProximos from '~/components/tasksProximos';
+import TopTab from '~/components/tasksNavBar';
 import styles from './styles';
 
-export default class Main extends Component {
+export default class Tasks extends Component {
   render() {
     return (
 
       <ScrollView>
-        <TasksNavBar />
-        <TasksVencidas />
+        <TopTab />
         <Button
           title="vai"
           onPress={() => this.props.navigation.navigate('Calendario')
@@ -30,17 +25,13 @@ export default class Main extends Component {
             ),
           }) */}
         />
-
-        <TasksHoje />
-        <TasksAmanha />
-        <TasksProximos />
       </ScrollView>
     );
   }
 }
 
 
-Main.navigationOptions = {
+Tasks.navigationOptions = {
   title: 'Tarefas',
   headerLeft: (
     <Image
