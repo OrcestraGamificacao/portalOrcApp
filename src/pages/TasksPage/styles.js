@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+import { fonts, colors } from '~/styles';
+
+const windowWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   logoOrcStyle: {
@@ -18,6 +21,21 @@ const styles = StyleSheet.create({
   addButtonTextStyle: {
     fontSize: 54,
     color: '#FFF',
+  },
+
+  textInputStyle: {
+    height: 150,
+    width: windowWidth * 0.9,
+    borderColor: 'grey',
+    borderWidth: 1,
+    justifyContent: 'center',
+    paddingLeft: 20,
+    paddingTop: 10,
+    fontSize: fonts.input,
+  },
+
+  buttonColor: {
+    backgroundColor: colors.greenOrcLight,
   },
 });
 
