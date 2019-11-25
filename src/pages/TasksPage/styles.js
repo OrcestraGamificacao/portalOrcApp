@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { fonts } from '~/styles';
+import { fonts, colors } from '~/styles';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
     fontSize: fonts.input,
   },
 
+  buttonColor: {
+    backgroundColor: colors.greenOrcLight,
+  },
 });
 
 export default styles;

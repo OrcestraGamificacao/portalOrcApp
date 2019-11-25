@@ -24,7 +24,6 @@ export default class Tasks extends Component {
     headerRight: (
       <TouchableOpacity
         style={styles.addButtonStyle}
-
         onPress={navigation.getParam('visible')}
       >
         <Text style={styles.addButtonTextStyle}>+</Text>
@@ -70,8 +69,8 @@ export default class Tasks extends Component {
           dialogTitle={<DialogTitle title="Nova Tarefa" />}
           footer={(
             <DialogFooter>
-              <DialogButton text="Detalhar" />
-              <DialogButton text="Salvar" />
+              <DialogButton text="Detalhar" textStyle={{ color: 'black' }} />
+              <DialogButton text="Salvar" style={styles.buttonColor} textStyle={{ color: 'white' }} />
             </DialogFooter>
           )}
           onTouchOutside={() => {
